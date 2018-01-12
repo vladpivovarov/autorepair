@@ -1,0 +1,14 @@
+.send {
+  transform: translateY(-50%);
+}
+
+.send__container {
+  background: rgba(#241f21, .8);
+  padding: 40px 20px;
+}
+
+.send__button {
+  border-color: $maincolor;
+  color: #FFF;
+  background: $maincolor;
+}

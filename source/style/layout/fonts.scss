@@ -1,0 +1,29 @@
+$fonts-open-sans: "Bold", "Light", "Regular";
+
+$fonts-pt-sans: "PTS55F", "PTS75F";
+
+@each $font in $fonts-open-sans {
+  @font-face {
+    font-family: "OpenSans-#{$font}";
+    src: url("../fonts/OpenSans-#{$font}.ttf") format("truetype");
+  }
+}
+
+@each $font in $fonts-pt-sans {
+  @font-face {
+    font-family: $font;
+    src: url("../fonts/#{$font}.ttf") format("truetype");
+  }
+}
+
+@font-face {
+  font-family: "Font-awesome";
+  src: url("../fonts/fontawesome-webfont.ttf") format ('truetype');
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../fonts/Pacifico-Regular.ttf") format ('truetype');
+}
+
+

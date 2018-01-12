@@ -1,0 +1,22 @@
+.contact-block {
+  display: flex;
+  align-items: center;
+}
+
+.contact__icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #c1c1c1;
+  border-radius: 50%;
+}
+
+.contact__svg {
+  fill: #c1c1c1;
+}
+
+.contact__text {
+  font-size: 14px;
+  color: #c1c1c1;
+}

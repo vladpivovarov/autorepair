@@ -1,0 +1,72 @@
+@mixin inline-block($align) {
+  display: inline-block;
+  vertical-align: $align;
+}
+
+@mixin font-open-sans($style) {
+  font-family: "OpenSans-#{$style}";
+}
+// Bold Light Regular
+
+@mixin font-pt-sans($style) {
+  font-family: "PTS#{$style}F";
+}
+
+// 55 75
+
+@mixin centered($axis) {
+  position: absolute;
+  @if $axis == both {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @if $axis == x {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $axis == y {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// Adaptive breakpoints
+@mixin desktop {
+  @media (max-width: 1200px) and (min-width: 1201px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+    @content;
+  }
+}

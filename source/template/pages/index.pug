@@ -1,0 +1,181 @@
+extends ../_template
+
+block variables
+	- var title = 'Техник - Автосервис в Керчи'
+
+block content
+	header.header
+		.container.header__container
+			a(href="./").logo.header__logo
+				.logo__img
+					svg.logo__svg
+						use(xlink:href=`assets/img/sprite.svg#${svgId.car}`)
+				.logo__text Auto
+					span.logo__text_new Tehnik
+			.address.header__address
+				.contact-block.address__contact
+					.contact__icon
+						svg.contact__svg
+							use(xlink:href=`assets/img/sprite.svg#${svgId.where}`)
+					.contact__text= contacts.address
+				.contact-block.address__contact
+					.contact__icon
+						svg.contact__svg
+							use(xlink:href=`assets/img/sprite.svg#${svgId.phone}`)
+					.contact__text= contacts.phone
+	nav.nav
+		.container.nav__container
+			.menu.nav__menu
+				ul.menu__list
+					- for(var i = 0; i < menu.text.length; i++)
+						li.menu__item
+							a(href=`http://localhost:3000/${menu.link[i]}`).menu__link= menu.text[i]
+			a(href=`${button.order.link}`).button.button_blue_border= button.order.text2
+	.slideshow
+		.slideshow__box
+			.container.slideshow__container
+				.slideshow__body
+					h1.slideshow__title Профессиональный ремонт автомобилей в Керчи по разумным ценам
+					p.slideshow__text Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
+					a(href=`${button.order.link}`).button.slideshow__button.button_silver= button.order.about
+				.slideshow__arrow.slideshow__arrow_left
+					svg.slideshow__svg
+						use(xlink:href=`assets/img/sprite.svg#${svgId.arrow}`)
+				.slideshow__arrow.slideshow__arrow_right
+					svg.slideshow__svg
+						use(xlink:href=`assets/img/sprite.svg#${svgId.arrow}`)
+	.about
+		.container.about__container
+			.about__header
+				h2.about__title
+					| Профессиональный
+					b  автосервис
+					|  в Керчи
+				p.about__text
+					| Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам	Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
+				a(href=`${button.order.link}`).button.about__button.button_blue_border= button.order.text
+			ul.about__list
+					li.about__item
+						.about__item__image
+							svg.about__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.ecotime}`)
+						.about__item__desc
+							.about__item__title
+								b Экономим
+								|  Ваше время
+							.about__item__text Lorem Ipsum is simply dummy text of the printing and typesetting of the industry. Lorem Ipsum has been
+					li.about__item
+						.about__item__image
+							svg.about__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.prophesy}`)
+						.about__item__desc
+							.about__item__title
+								b Профессиональный
+								|  персонал
+							.about__item__text Lorem Ipsum is simply dummy text of the printing and typesetting of the industry. Lorem Ipsum has been
+					li.about__item
+						.about__item__image
+							svg.about__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.economy}`)
+						.about__item__desc
+							.about__item__title
+								b Бережем
+								|  Ваши деньги
+							.about__item__text Lorem Ipsum is simply dummy text of the printing and typesetting of the industry. Lorem Ipsum has been
+	.amenities
+		.triangle.amenities__triangle__left
+			svg(viewBox="0 0 1000 500" preserveAspectRatio="none").triangle__left
+				polygon(points="0,0 0,500 1000,500")
+		.triangle.amenities__triangle__right
+			svg(viewBox="0 0 1000 500" preserveAspectRatio="none").triangle__right
+				polygon(points="0,500 1000,500 1000,0")
+		.container.amenities__container
+			h2.amenities__title Все услуги "СТО Техник"
+			ul.amenities__list
+				- for (var i = 0; i < amen.length; i++)
+					li.amenities__item
+						a(href=`${amen[i].link}`).amenities__item__link
+							.amenities__img
+								img(src=`${amen[i].src}`)
+							.amenities__top
+							.amenities__dop
+								.amenities__item__title= amen[i].title
+								.amenities__item__desc= amen[i].desc
+								.button.amenities__button= button.order.about
+	.map-block
+		.container.map-block__container
+			h2.map-block__title Как нас найти
+			.map
+				.map__map
+					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A226bf5e6f1b02a6b3d362d848a027b6444cabe7d6dd9fb881619164c73119136&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true")
+				.map-info
+					b.map-info__title Наш адрес
+					.contact-block.map__adress
+						.contact__icon
+							svg.contact__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.where}`)
+						.contact__text= contacts.address
+					b.map-info__title Время работы
+					.contact-block.map__adress
+						.contact__icon
+							svg.contact__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.times}`)
+						.contact__text= contacts.times
+					b.map-info__title GPS адрес
+					.contact-block.map__adress
+						.contact__icon
+							svg.contact__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.where}`)
+						.contact__text= contacts.gps
+
+	.end
+		.send
+			.container.send__container
+				//h2.send__title Перезвонить Вам сейчас?
+				.input-block.send__input-block
+					.input.send__input
+						.input__before
+							svg.input__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.user}`)
+						input(type="text" placeholder="Ваше имя")
+					.input.send__input
+						.input__before
+							svg.input__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.phone}`)
+						input(type="text" placeholder="Ваш телефон")
+					a(href="./").button.send__button.button_blue_bg= button.sends.text2
+		.end__block
+			.container.end__block__container
+				.end__about
+					h3.end__title Об автосервисе
+					p.end__about__desc
+						| Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
+				.end__amenities
+					h3.end__title Наше меню
+					.menu.end__menu
+						ul.menu__list
+							- for(var i = 0; i < menu.text.length; i++)
+								li.menu__item
+									a(href=`${menu.link[i]}`).menu__link= menu.text[i]
+				.end__contacts
+					h3.end__title Контакты и время работы
+					.contact-block.end__home
+						.contact__icon
+							svg.contact__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.where}`)
+						.contact__text= contacts.address
+					.contact-block.end__home
+						.contact__icon
+							svg.contact__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.phone}`)
+						.contact__text= contacts.phone
+					.contact-block.end__home
+						.contact__icon
+							svg.contact__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.mess}`)
+						.contact__text= contacts.mail
+					.contact-block.end__home
+						.contact__icon
+							svg.contact__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.times}`)
+						.contact__text= contacts.times

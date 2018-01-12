@@ -1,0 +1,17 @@
+
+.footer {
+  background-image: url(../img/black-footer.png);
+  background-repeat: repeat;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.creator__link {
+  color: #eeeeee;
+}
+

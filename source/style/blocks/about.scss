@@ -1,0 +1,87 @@
+.about {
+  margin-bottom: 70px;
+}
+.about__header {
+  text-align: center;
+}
+
+.about__title {
+  margin-top: 50px;
+  font-size: 30px;
+  @include font-open-sans(Regular);
+  text-transform: uppercase;
+}
+
+.about__text {
+  margin: 0 auto;
+  width: 70%;
+  @include font-pt-sans(55);
+  font-size: 15px;
+}
+
+.about__button {
+  margin-top: 20px;
+  border: 2px solid $maincolor !important;
+  color: $maincolor !important;
+}
+
+.about__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.about__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 300px;
+  padding: 0 40px;
+  text-align: center;
+
+  &:nth-child(2) {
+    margin-top: 40px;
+  }
+}
+
+.about__item__image {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.about__svg {
+  height: 100%;
+  fill: none;
+  stroke: $textcolor;
+  stroke-width: 3px;
+  stroke-dasharray: 0% 100%;
+  transition: all 5s;
+}
+
+.about__item:nth-child(2) {
+  & .about__svg {
+    transition-delay: 1s;
+  }
+}
+
+.about__item:nth-child(3) {
+  & .about__svg {
+    transition-delay: 2s;
+  }
+}
+
+.showed {
+  stroke-dasharray: 100% 0%;
+}
+
+.about__item__title {
+  @include font-open-sans(Regular);
+  font-size: 24px;
+}
+
+.about__item__text {
+  @include font-pt-sans(55);
+  font-size: 16px;
+}

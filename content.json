@@ -1,0 +1,81 @@
+{
+  "name": "Техник",
+  "contacts": {
+    "address": "ул. Орджоникидзе 151",
+    "phone": "+7(978)717-87-02",
+    "mail": "rusinavto@mail.ru",
+    "times": "Пн - Пт: 09:00 - 20:00, Сб - Вс: 10:00 - 20:00",
+    "gps": "45.307868, 36.433009"
+  },
+  "logo": {
+    "text": "AutoTehnik",
+    "src": "logo.png"
+  },
+  "menu": {
+    "text": ["Главная","О нас","Услуги","Товары","Прайс","Вакансии", "Контакты"],
+    "link": ["","link1","link1","link1","link1","link1", "link1"]
+  },
+  "button": {
+    "order": {
+      "text": "Связаться с нами!",
+      "text2": "Заказать звонок!",
+      "about": "Подробнее",
+      "link": "./"
+    },
+    "sends": {
+      "text": "Отправить!",
+      "text2": "Перезвоните мне!",
+      "link": "./"
+    }
+  },
+  "svgId": {
+    "economy": "economy",
+    "ecotime": "ecotime",
+    "prophesy": "prophesy",
+    "phone": "phone",
+    "mess": "mess",
+    "where": "where",
+    "times": "times",
+    "arrow": "arrow",
+    "car": "car",
+    "user": "user"
+  },
+  "amen": [
+    {
+      "title": "3D развал-схождение",
+      "src": "assets/img/3d.jpg",
+      "link": "./",
+      "desc": "loremlorem loremlorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+    },
+    {
+      "title": "Диагностика и ремонт ходовой",
+      "src": "assets/img/hodovoy.jpg",
+      "link": "./",
+      "desc": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lore lorem lorem"
+    },
+    {
+      "title": "Запчасти под заказ",
+      "src": "assets/img/zapchasti.jpg",
+      "link": "./",
+      "desc": "loremlorem loremlorem lorem loremlorem loremlorem lorem loremlorem loremlorem lorem"
+    },
+    {
+      "title": "Шиномонтаж",
+      "src": "assets/img/shino.jpg",
+      "link": "./",
+      "desc": "loremlorem loremlorem lorem loremlorem loremlorem lorem loremlorem loremlorem lorem"
+    },
+    {
+      "title": "Сварочные работы",
+      "src": "assets/img/svarka.jpg",
+      "link": "./",
+      "desc": "loremlorem loremlorem lorem loremlorem loremlorem lorem loremlorem loremlorem lorem"
+    },
+    {
+      "title": "Автоэлектрика",
+      "src": "assets/img/avtoelektrika.png",
+      "link": "./",
+      "desc": "loremlorem loremlorem lorem loremlorem loremlorem lorem loremlorem loremlorem lorem"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+.button {
+  display: inline-block;
+  padding: 7px 15px;
+  border: 2px solid $textcolor;
+  font-size: 14px;
+  color: $textcolor;
+  text-transform: uppercase;
+  transition: all .5s;
+}
+
+.button_blue_border {
+  border-color: $maincolor;
+  color: $maincolor;
+  &:hover {
+    color: #fff !important;
+    background: $maincolor;
+  }
+}
+
+.button_blue_bg {
+  border-color: $maincolor;
+  background-color: $maincolor;
+  color: #fff;
+  &:hover {
+    color: $maincolor;
+    background: none;
+  }
+}
+
+.button_silver {
+  border-color: $textcolor;
+  color: $textcolor;
+  &:hover {
+    color: rgba(#000, .8);
+    background-color: $textcolor;
+  }
+}
