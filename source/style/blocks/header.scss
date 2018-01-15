@@ -10,4 +10,12 @@
 
 .header__address {
   align-items: flex-start;
+  & .contact-block {
+    margin: 0;
+  }
+
+  & .contact__icon {
+    border: none;
+  }
+  margin: 8px 0 8px 0;
 }

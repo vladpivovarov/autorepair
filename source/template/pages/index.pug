@@ -30,20 +30,33 @@ block content
 					- for(var i = 0; i < menu.text.length; i++)
 						li.menu__item
 							a(href=`http://localhost:3000/${menu.link[i]}`).menu__link= menu.text[i]
-			a(href=`${button.order.link}`).button.button_blue_border= button.order.text2
+			a(href=`${button.order.link}`).toForm.button.button_blue_border= button.order.text2
 	.slideshow
-		.slideshow__box
-			.container.slideshow__container
-				.slideshow__body
-					h1.slideshow__title Профессиональный ремонт автомобилей в Керчи по разумным ценам
-					p.slideshow__text Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
-					a(href=`${button.order.link}`).button.slideshow__button.button_silver= button.order.about
-				.slideshow__arrow.slideshow__arrow_left
-					svg.slideshow__svg
-						use(xlink:href=`assets/img/sprite.svg#${svgId.arrow}`)
-				.slideshow__arrow.slideshow__arrow_right
-					svg.slideshow__svg
-						use(xlink:href=`assets/img/sprite.svg#${svgId.arrow}`)
+		.slideshow__main
+			.slideshow__box.slide-show
+				.container.slideshow__container
+					.slideshow__body
+						h1.slideshow__title Ремонт авто в Керчи №1
+						p.slideshow__text Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
+						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_silver= button.order.about
+			.slideshow__box
+				.container.slideshow__container
+					.slideshow__body
+						h1.slideshow__title  в Керчи по разумным ценам
+						p.slideshow__text Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
+						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_silver= button.order.about
+			.slideshow__box
+				.container.slideshow__container
+					.slideshow__body
+						h1.slideshow__title автомобилей в Керчи по разумным ценам
+						p.slideshow__text Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
+						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_silver= button.order.about
+			.slideshow__arrow.slideshow__arrow_left
+				svg.slideshow__svg
+					use(xlink:href=`assets/img/sprite.svg#${svgId.arrow}`)
+			.slideshow__arrow.slideshow__arrow_right
+				svg.slideshow__svg
+					use(xlink:href=`assets/img/sprite.svg#${svgId.arrow}`)
 	.about
 		.container.about__container
 			.about__header
@@ -53,7 +66,7 @@ block content
 					|  в Керчи
 				p.about__text
 					| Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам	Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
-				a(href=`${button.order.link}`).button.about__button.button_blue_border= button.order.text
+				a(href=`${button.order.link}`).toForm.button.about__button.button_blue_border= button.order.text
 			ul.about__list
 					li.about__item
 						.about__item__image
@@ -127,24 +140,29 @@ block content
 							svg.contact__svg
 								use(xlink:href=`assets/img/sprite.svg#${svgId.where}`)
 						.contact__text= contacts.gps
-
+			h2.new
+				b.line1 Звоните
+				b.line2 прямо сейчас
+				b.line3 (консультации бесплатно)
 	.end
 		.send
 			.container.send__container
-				//h2.send__title Перезвонить Вам сейчас?
-				.input-block.send__input-block
+				form(id="form").input-block.send__input-block
+					input(type="hidden" name="project_name" value="Сайт автосервиса")
+					input(type="hidden" name="admin_email" value="vladpivovarov2797@ya.ru")
+					input(type="hidden" name="form_subject" value="Заявка на обратный звонок")
 					.input.send__input
 						.input__before
 							svg.input__svg
 								use(xlink:href=`assets/img/sprite.svg#${svgId.user}`)
-						input(type="text" placeholder="Ваше имя")
+						input(type="text" name="Name" placeholder="Ваше имя" required)
 					.input.send__input
 						.input__before
 							svg.input__svg
 								use(xlink:href=`assets/img/sprite.svg#${svgId.phone}`)
-						input(type="text" placeholder="Ваш телефон")
-					a(href="./").button.send__button.button_blue_bg= button.sends.text2
-		.end__block
+						input(type="text" name="Phone" placeholder="Ваш телефон" required)
+					input(type="submit" value=`${button.sends.text2}`).button.send__button.button_blue_bg
+		.end__block(id="end")
 			.container.end__block__container
 				.end__about
 					h3.end__title Об автосервисе

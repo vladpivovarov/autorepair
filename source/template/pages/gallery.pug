@@ -1,0 +1,22 @@
+extends ../templatePages
+
+block variables
+	- var title = 'Галерея - Автосервис в Керчи'
+
+block titles
+	| Галерея
+block mainTitle
+	| Наши работы
+block mainDesc
+	.gallery
+		- for (var i = 0; i < gallery.link.length; i++)
+			a.flipLightBox(href=`assets/img/gallery/${gallery.link[i]}.jpg`)
+				.flipLightBox__img
+					img(src=`assets/img/gallery/${gallery.link[i]}-min.jpg`)
+				span.flipLightBox__text
+					b= gallery.title[i]
+					|  #{gallery.desc[i]}
+
+
+
+

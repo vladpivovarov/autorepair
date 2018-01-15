@@ -1,0 +1,29 @@
+extends ../templatePages
+
+block variables
+	- var title = 'Услуги - Автосервис в Керчи'
+
+block titles
+	| Услуги
+block mainTitle
+	| Услуги нашего автосервиса
+block mainDesc
+	.amenities__container
+		.mini-content
+			img.mini-content__img(src="assets/img/1-min.jpg")
+			p.mini-content__p
+				| В Керчи по разумным ценамВсем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценамв Керчи по разумным ценамВсем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей
+			p.mini-content__p
+				| Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценамв Керчи по разумным ценамВсем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам
+		h2.amenities__title Все услуги "СТО Техник"
+		ul.amenities__list
+			- for (var i = 0; i < amen.length; i++)
+				li.amenities__item
+					a(href=`${amen[i].link}`).amenities__item__link
+						.amenities__img
+							img(src=`${amen[i].src}`)
+						.amenities__top
+						.amenities__dop
+							.amenities__item__title= amen[i].title
+							.amenities__item__desc= amen[i].desc
+							.button.amenities__button= button.order.about

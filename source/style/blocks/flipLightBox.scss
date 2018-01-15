@@ -1,0 +1,52 @@
+
+
+.flipLightBox__img {
+  display: inline-block;
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+
+  @include phone {
+    width: 100%;
+  }
+}
+
+.flipLightBox__img img {
+  height: 100%;
+  min-width: 100%;
+}
+
+#flb-lightbox-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #000 !important;
+  color: $textcolor !important;
+
+  & span {
+    color: darken($textcolor,20%) !important;
+    padding: 5px 80px;
+  }
+
+  & b {
+    width: 100%;
+    text-transform: uppercase;
+  }
+}
+
+#flb-next-pic {
+  width: 30px;
+  font-size: 0 !important;
+  height: 30px;
+  transform: rotate(180deg);
+  background-image: url(../img/next.png);
+  background-repeat: no-repeat;
+}
+
+#flb-back-pic {
+  width: 30px;
+  font-size: 0 !important;
+  height: 30px;
+  background-image: url(../img/next.png);
+  background-repeat: no-repeat;
+}

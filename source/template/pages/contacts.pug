@@ -1,0 +1,46 @@
+extends ../templatePages
+
+block variables
+	- var title = 'Контакты - Автосервис в Керчи'
+
+block titles
+	| Контакты
+block mainTitle
+	| Мы ждем вас !
+block mainDesc
+	.map-block.contacts
+		.container.map-block__container
+			.map
+				.map__map
+					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A226bf5e6f1b02a6b3d362d848a027b6444cabe7d6dd9fb881619164c73119136&amp;width=100%&amp;height=450&amp;lang=ru_RU&amp;scroll=true")
+				.map-info
+					b.map-info__title Наш адрес
+					.contact-block.map__adress
+						.contact__icon
+							svg.contact__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.where}`)
+						.contact__text= contacts.address
+					b.map-info__title Время работы
+					.contact-block.map__adress
+						.contact__icon
+							svg.contact__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.times}`)
+						.contact__text= contacts.times
+					b.map-info__title GPS адрес
+					.contact-block.map__adress
+						.contact__icon
+							svg.contact__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.where}`)
+						.contact__text= contacts.gps
+					b.map-info__title Email
+					.contact-block.map__adress
+						.contact__icon
+							svg.contact__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.mess}`)
+						.contact__text= contacts.mail
+					b.map-info__title Телефон
+					.contact-block.map__adress
+						.contact__icon
+							svg.contact__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.phone}`)
+						.contact__text= contacts.phone

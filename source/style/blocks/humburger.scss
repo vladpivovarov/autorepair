@@ -1,0 +1,40 @@
+
+.three{
+  box-sizing: border-box;
+  color: $maincolor;
+  text-align: center;
+}
+
+.hamburger {
+  padding: 20px;
+  margin-left: 10px;
+}
+
+.hamburger .line{
+  width: 25px;
+  height: 4px;
+  background: lighten($textcolor, 30%);
+  display: block;
+  margin: 5px auto;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+#hamburger-10{
+  transition: all 0.5s ease-in-out;
+}
+
+#hamburger-10.is-active{
+  transform: rotate(90deg);
+}
+
+#hamburger-10.is-active .line:nth-child(1){
+  width: 15px;
+}
+
+#hamburger-10.is-active .line:nth-child(2){
+  width: 20px;
+}

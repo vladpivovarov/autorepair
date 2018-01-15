@@ -1,0 +1,7 @@
+.title {
+  margin-bottom: 0;
+  @include font-open-sans(Bold);
+  color: lighten($textcolor, 20%);
+  text-transform: uppercase;
+  font-size: 18px;
+}

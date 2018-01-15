@@ -1,0 +1,81 @@
+.main {
+  margin-left: 250px;
+  transition: all .5s;
+}
+
+.main__header {
+  display: flex;
+  justify-content: space-between;
+  height: 110px;
+  background-color: rgba(#eeeeee, .5) !important;
+}
+
+.main__title {
+  display: flex;
+  align-items: center;
+}
+
+.main__info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.main__info__button {
+  margin-left: 30px;
+  align-self: center;
+}
+
+.main__info__desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+  border-left: 1px solid lighten($textcolor, 30%);
+}
+
+.contact-block_main {
+  padding: 5px 25px;
+  & .contact__text {
+    font-size: 14px !important;
+    font-weight: bold !important;
+  }
+}
+
+.main__header {
+  border-bottom: 1px solid lighten($textcolor, 30%);
+}
+
+.main__body {
+  padding: 30px;
+}
+
+.main__body__title {
+  color: rgba(#2a2828, .9);
+  border-bottom: 2px solid lighten(#2a2828, 70%);
+  margin-bottom: 30px;
+}
+
+.main-active {
+  margin-left: 0px;
+}
+
+.mini-content {
+  &:after {
+    @extend %clearfix;
+  }
+}
+
+.mini-content__img {
+  float: left;
+  max-width: 40%;
+  @include phone() {
+    max-width: 100%;
+  }
+  float: left;
+  padding: 0 30px 30px 0;
+}
+
+.mini-content__p {
+  margin-bottom: 20px;
+}

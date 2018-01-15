@@ -1,0 +1,73 @@
+block variables
+
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title= title
+		meta(content="" name="author")
+		meta(content="" name="description")
+		meta(content="" name="keywords")
+		meta(content="width=1200, initial-scale=1" name="viewport")
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+		//- favicon block start
+		//- favicon block end
+
+		link(rel='stylesheet' href='assets/css/foundation.css')
+		link(rel='stylesheet' href='assets/css/app.css')
+		script(src='assets/js/foundation.js' defer)
+		script(src='assets/js/app.js' defer)
+		<!--[if lt IE 9]>
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		<![endif]-->
+
+	body
+		.wrapper
+			.left-block
+				.left-block__logo
+					a(href="./").logo
+						.logo__img
+							svg.logo__svg
+								use(xlink:href=`assets/img/sprite.svg#${svgId.car}`)
+						.logo__text Auto
+							span.logo__text_new Tehnik
+				.menu.left-block__menu
+					ul.menu__list
+						- for(var i = 0; i < menu.text.length; i++)
+							li.menu__item
+								a(href=`http://localhost:3000/${menu.link[i]}`).menu__link.left__menu__item.contact-block
+									.contact__icon
+										svg.contact__svg
+											use(xlink:href=`assets/img/sprite.svg#${menu.svg[i]}`)
+									.contact__text= menu.text[i]
+					a(href="./").left-block__out
+			.main
+				.main__header
+					.main__title
+						.three
+							div(class="hamburger" id="hamburger-10")
+								span(class="line")
+								span(class="line")
+								span(class="line")
+						h2.title
+							block titles
+					.main__info
+						a(href=`${button.order.linkFrom}`).button.button_blue_border.main__info__button= button.order.text2
+						.main__info__desc
+							.contact-block.contact-block_main
+								.contact__icon
+									svg.contact__svg
+										use(xlink:href=`assets/img/sprite.svg#${svgId.where}`)
+								.contact__text= contacts.address
+							.contact-block.contact-block_main
+								.contact__icon
+									svg.contact__svg
+										use(xlink:href=`assets/img/sprite.svg#${svgId.phone}`)
+								.contact__text= contacts.phone
+				.main__body
+					h1.main__body__title
+						block mainTitle
+					.main__body__desc
+						block mainDesc
+

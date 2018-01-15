@@ -1,0 +1,8 @@
+.contacts {
+  & .map__map {
+    flex: 1;
+  }
+  & .map-info {
+    margin-top: 0;
+  }
+}
