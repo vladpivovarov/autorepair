@@ -13,7 +13,7 @@
   },
   "menu": {
     "text": ["Главная","О нас","Услуги","Галерея","Прайс-лист","Вакансии", "Контакты"],
-    "link": ["","about.html","amenities.html","gallery.html","price.html","vacancy.html", "contacts.html"],
+    "link": ["./","about.html","amenities.html","gallery.html","price.html","vacancy.html", "contacts.html"],
     "svg": ["main","about","prophesy","gallery","price","vacancy", "where"]
   },
   "button": {

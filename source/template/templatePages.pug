@@ -36,7 +36,7 @@ html
 					ul.menu__list
 						- for(var i = 0; i < menu.text.length; i++)
 							li.menu__item
-								a(href=`http://localhost:3000/${menu.link[i]}`).menu__link.left__menu__item.contact-block
+								a(href=`${menu.link[i]}`).menu__link.left__menu__item.contact-block
 									.contact__icon
 										svg.contact__svg
 											use(xlink:href=`assets/img/sprite.svg#${menu.svg[i]}`)

@@ -29,7 +29,7 @@ block content
 				ul.menu__list
 					- for(var i = 0; i < menu.text.length; i++)
 						li.menu__item
-							a(href=`http://localhost:3000/${menu.link[i]}`).menu__link= menu.text[i]
+							a(href=`${menu.link[i]}`).menu__link= menu.text[i]
 			a(href=`${button.order.link}`).toForm.button.button_blue_border= button.order.text2
 	.slideshow
 		.slideshow__main
