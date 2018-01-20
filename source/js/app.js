@@ -78,7 +78,7 @@ var module = function() {
       if( $("div").is(".creator")) {
         $(".creator").html("Создано с любовью от <a href='./' class='creator__link'> Webr </a>")
       } else {
-        $(".footer__container").html("<div class='copyright'> 2018 Все права защищены </div> Создано с любовью от<a href='./' class='creator__link'>Webr </a>")
+        $(".footer__container").html("<div class='copyright'> 2018 Все права защищены </div> Создано с любовью от<a href='https://vk.com/vladislavpivovarov' class='creator__link'>Webr </a>")
       }
     };
 
