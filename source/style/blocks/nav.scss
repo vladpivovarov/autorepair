@@ -10,20 +10,47 @@
     height: 4px;
     background-color: #efefef;
   }
+  & .button {
+    @include desktop-mini() {
+      margin-top: -2px;
+    }
+    @include laptop() {
+      margin-top: 8px;
+    }
+  }
+}
+
+.nav__three {
+  display: none;
+  @include laptop() {
+    display: block;
+    & .hamburger {
+      margin-left: -10px;
+    }
+  }
 }
 
 .nav__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include laptop() {
+    align-items: flex-start;
+  }
 }
 
 .nav__menu {
   display: flex;
+  transition: all 1s;
 
   & .menu__list {
     display: flex;
     margin-left: -15px;
+    flex-wrap: wrap;
+    transition: all .5s;
+    @include desktop-mini() {
+      margin-left: 10px;
+    }
   }
 
   & .menu__item {
@@ -48,10 +75,10 @@
     position: relative;
     padding: 30px 15px;
     color: $textcolor;
-    font-weight: bold;
     text-transform: uppercase;
-    @include font-open-sans(Regular);
-    font-size: 13.5px;
+    @include font-open-sans(Bold);
+    letter-spacing: calc(-1px/3);
+    font-size: 13px;
     transition: all .5s;
 
     &:after {
@@ -74,7 +101,26 @@
         margin-left: 0%;
       }
     }
+
+    @include desktop-mini() {
+      padding: 13px 10px;
+    }
+
   }
+
+  @include laptop() {
+    height: 0;
+    overflow: hidden;
+    transition: all .5s;
+    opacity: 0;
+  }
+
+}
+
+.nav_active {
+  height: auto;
+  opacity: 1;
+  transition: all .5s;
 }
 
 .fixed {
@@ -86,9 +132,12 @@
   background-color: rgba(#000, .8);
   transition: all 1s;
   & .menu__link {
-    font-size: 13.5;
+    font-size: 13px;
     padding: 20px 15px;
     color: rgba(#fff,.5);
+    @include laptop() {
+      padding: 12px 15px;
+    }
   }
   & .active {
     color: $maincolor;

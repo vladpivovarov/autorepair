@@ -1,20 +1,20 @@
 {
   "name": "Техник",
   "contacts": {
-    "address": "ул. Орджоникидзе 151",
-    "phone": "+7 (978) 717-87-02",
-    "mail": "rusinavto@mail.ru",
-    "times": "Пн - Пт: 09:00 - 20:00, Сб - Вс: 10:00 - 20:00",
-    "gps": "45.307868, 36.433009"
+    "address": " ул. Орджоникидзе 151",
+    "phone": " +7 (978) 717-87-02",
+    "mail": " rusinavto@mail.ru",
+    "times": " Пн - Сб: 8:00 - 19:00, Вс: 9:00 - 17:00",
+    "gps": " 45.307868, 36.433009"
   },
   "logo": {
     "text": "AutoTehnik",
     "src": "logo.png"
   },
   "menu": {
-    "text": ["Главная","О нас","Услуги","Галерея","Прайс-лист","Вакансии", "Контакты"],
-    "link": ["./","about.html","amenities.html","gallery.html","price.html","vacancy.html", "contacts.html"],
-    "svg": ["main","about","prophesy","gallery","price","vacancy", "where"]
+    "text": ["Главная","О нас","Услуги", "Магазин", "Галерея","Прайс-лист","Вакансии", "Контакты"],
+    "link": ["./","about.html","amenities.html", "shop.html", "gallery.html","price.html","vacancy.html", "contacts.html"],
+    "svg": ["main","about","prophesy", "shop", "gallery","price", "vacancy", "where"]
   },
   "button": {
     "order": {
@@ -45,6 +45,12 @@
     "hamburger": "hamburger"
   },
   "amen": [
+    {
+      "title": "Сезонное хранение резины",
+      "src": "assets/img/sezon.jpg",
+      "link": "./",
+      "desc": "loremlorem loremlorem lorem lorem lorem lorem lorem lorem lorem "
+    },
     {
       "title": "3D развал-схождение",
       "src": "assets/img/3d.jpg",
@@ -77,7 +83,7 @@
     },
     {
       "title": "Автоэлектрика",
-      "src": "assets/img/avtoelektrika.png",
+      "src": "assets/img/avtoelektrika.jpg",
       "link": "./",
       "desc": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
     }
@@ -100,5 +106,9 @@
       "это описание работы автосервиса",
       "это описание работы автосервиса"
     ]
+  },
+  "shop": {
+    "title": ["Масла","Фильтры","Ремни","Автохимия"],
+    "src": ["oil.jpg","filtry.jpg","remni.jpg", "himia.jpg"]
   }
 }

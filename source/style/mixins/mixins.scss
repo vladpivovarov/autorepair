@@ -40,8 +40,21 @@
 }
 
 // Adaptive breakpoints
+
+@mixin desktop-max {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media (max-width: 1200px) and (min-width: 1201px) {
+  @media (max-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin desktop-mini {
+  @media (max-width: 1100px) {
     @content;
   }
 }
@@ -60,6 +73,12 @@
 
 @mixin phone {
   @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin phone-mini {
+  @media (max-width: 380px) {
     @content;
   }
 }

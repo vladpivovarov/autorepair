@@ -9,10 +9,12 @@ block mainTitle
 	| Мы ждем вас !
 block mainDesc
 	.map-block.contacts
+		.panorama
+			script(src="https://panoramas.api-maps.yandex.ru/embed/1.x/?lang=ru&ll=36.435075%2C45.307851&ost=dir%3A13.170872753048293%2C0~span%3A119.99999999999999%2C58.977695395799344&size=%2C300&l=stv")
 		.container.map-block__container
 			.map
 				.map__map
-					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A226bf5e6f1b02a6b3d362d848a027b6444cabe7d6dd9fb881619164c73119136&amp;width=100%&amp;height=450&amp;lang=ru_RU&amp;scroll=true")
+					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A226bf5e6f1b02a6b3d362d848a027b6444cabe7d6dd9fb881619164c73119136&amp;height=450&amp;lang=ru_RU&amp;scroll=false")
 				.map-info
 					b.map-info__title Наш адрес
 					.contact-block.map__adress
@@ -20,6 +22,7 @@ block mainDesc
 							svg.contact__svg
 								use(xlink:href=`assets/img/sprite.svg#${svgId.where}`)
 						.contact__text= contacts.address
+							| (ост.Телецентр)
 					b.map-info__title Время работы
 					.contact-block.map__adress
 						.contact__icon

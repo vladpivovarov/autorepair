@@ -1,0 +1,86 @@
+extends ../templatePages
+
+block variables
+	- var title = 'Прием на работу - Автосервис в Керчи'
+
+block titles
+	| Магазин
+block mainTitle
+	| Наш автомагазин
+block mainDesc
+	.mini-content
+		img.mini-content__img.mini-content__img_shop(src="assets/img/shop.png")
+		p.mini-content__p
+			| В Керчи по разумным ценамВсем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумнымремонт автомобилей в Керчи по разумнымремонт автомобилей в Керчи по разумным ремонт автомобилей в Керчи по разумным
+		p.mini-content__p
+			| Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценамв Керчи по разумным ценам
+	h3  У нас вы можете приобрести такие товары, как:
+	ul.shop__list
+		- for(var i = 0; i < shop.title.length; i++)
+			li.shop__item
+				b.shop__title= shop.title[i]
+				.shop__img-block
+					img(src=`assets/img/${shop.src[i]}`).shop__img
+	h3  Прайс по некоторым товарам
+	table( cellpadding='0', cellspacing='0', width='642').table-price
+		colgroup
+			col
+			col
+			col
+			col
+		tbody
+			tr(height='31')
+				td(colspan='2', height='31', style='height:31px;width:385px;')
+					strong ДВИГАТЕЛЬ - ЦЕНЫ НА РЕМОНТ
+				td(style='width:131px;')  
+				td(style='width:127px;')  
+			tr(height='100')
+				td(height='120', rowspan='2', style='height:120px;width:191px;') Работы
+				td(rowspan='2', style='width:195px;')
+					| Отечественные
+					br
+					|      цена руб.
+				td(rowspan='2', style='width:131px;')
+					| Нива
+					br
+					|      цена руб.
+				td(rowspan='2', style='width:127px;')
+					| Иномарки
+					br
+					|      цена руб.
+			tr(height='20')
+			tr(height='40')
+				td(height='40', style='height:40px;width:191px;') Капитальный ремонт 8 клапанов, классика
+				td(rowspan='3', style='width:195px;') 10000-13000
+				td(rowspan='3', style='width:131px;') 15000
+				td(rowspan='3', style='width:127px;') 15000-80000
+			tr(height='20')
+				td(height='20', style='height:20px;width:191px;')  
+			tr(height='40')
+				td(height='40', style='height:40px;width:191px;') Капитальный ремонт 16 клапанов
+			tr(height='40')
+				td(height='40', style='height:40px;width:191px;') Снятие и установка двигателя
+				td(style='width:195px;')
+					a(href='tel:4000-7500') 4000-7500
+				td(style='width:131px;') 8000
+				td(style='width:127px;') 10000-50000
+			tr(height='20')
+				td(height='20', style='height:20px;width:191px;') Замена поршневых колец
+				td(style='width:195px;')
+					a(href='tel:5000-9000') 5000-9000
+				td(style='width:131px;') 7500
+				td(style='width:127px;')
+					a(href='tel:4000-35000') 4000-35000
+			tr(height='40')
+				td(height='40', style='height:40px;width:191px;') Замена маслосъемных колпачков
+				td(style='width:195px;')
+					a(href='tel:1800-3500') 1800-3500
+				td(style='width:131px;') 3500
+				td(style='width:127px;')
+					a(href='tel:2500-20000') 2500-20000
+			tr(height='40')
+				td(height='40', style='height:40px;width:191px;') Замена клапанной прокладки
+				td(style='width:195px;') 300-500
+				td(style='width:131px;') 500
+				td(style='width:127px;')
+					a(href='tel:1000-5000') 1000-5000

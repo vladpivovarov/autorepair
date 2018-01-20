@@ -17,6 +17,9 @@
   width: 70%;
   @include font-pt-sans(55);
   font-size: 15px;
+  @include laptop() {
+    width: 100%;
+  }
 }
 
 .about__button {
@@ -30,6 +33,8 @@
   justify-content: space-around;
   align-items: flex-start;
   margin-top: 30px;
+  flex-wrap: wrap;
+  margin-bottom: -10px;
 }
 
 .about__item {
@@ -39,9 +44,15 @@
   flex: 1 1 300px;
   padding: 0 40px;
   text-align: center;
+  margin-bottom: 10px;
 
   &:nth-child(2) {
     margin-top: 40px;
+  }
+  @include laptop() {
+    &:nth-child(2) {
+      margin-top: 0px;
+    }
   }
 }
 

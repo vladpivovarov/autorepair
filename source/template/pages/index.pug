@@ -25,6 +25,11 @@ block content
 					.contact__text= contacts.phone
 	nav.nav
 		.container.nav__container
+			.three.nav__three
+				div(class="hamburger" id="hamburger-10")
+					span(class="line")
+					span(class="line")
+					span(class="line")
 			.menu.nav__menu
 				ul.menu__list
 					- for(var i = 0; i < menu.text.length; i++)
@@ -37,19 +42,19 @@ block content
 				.container.slideshow__container
 					.slideshow__body
 						h1.slideshow__title Ремонт авто в Керчи №1
-						p.slideshow__text Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
+						p.slideshow__text более 20 лет опыта в сфере ремонта и постгарантийного обслуживания
 						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_silver= button.order.about
 			.slideshow__box
 				.container.slideshow__container
 					.slideshow__body
-						h1.slideshow__title  в Керчи по разумным ценам
-						p.slideshow__text Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
+						h1.slideshow__title  Заботимся о клиентах
+						p.slideshow__text Мы ценим время и деньги наших клиентов, поэтому работаем быстро и эффективно, без наценок и переплат.
 						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_silver= button.order.about
 			.slideshow__box
 				.container.slideshow__container
 					.slideshow__body
-						h1.slideshow__title автомобилей в Керчи по разумным ценам
-						p.slideshow__text Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
+						h1.slideshow__title КУЗОВНОЙ РЕМОНТ
+						p.slideshow__text Удалим любые повреждения и восстановим изначальный вид вашего автомобиля
 						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_silver= button.order.about
 			.slideshow__arrow.slideshow__arrow_left
 				svg.slideshow__svg
@@ -65,7 +70,7 @@ block content
 					b  автосервис
 					|  в Керчи
 				p.about__text
-					| Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам	Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
+					| Техник автосервис имеет опыт работы в сфере обслуживания автомобилей уже более 20 лет. Мы регулярно обновляем свое оборудование и обучаем персонал работе с современными принципами обслуживания и ремонта автотранспорта. Подобранная нами команда специалистов устранит большой спектр технических неисправностей, а также подготовит ваше авто к наступающему сезону. Всегда есть автохимия и масла в наличии и под заказ по разумным ценам. У нас вы можете заказать запчасти для своего авто. Для постоянных клиентов действует система лояльности. На территории автосервиса расположена комфортная комната ожидания для клиента, в которой можно выпить чашечку кофе и воспользоваться интернетом.
 				a(href=`${button.order.link}`).toForm.button.about__button.button_blue_border= button.order.text
 			ul.about__list
 					li.about__item
@@ -76,7 +81,7 @@ block content
 							.about__item__title
 								b Экономим
 								|  Ваше время
-							.about__item__text Lorem Ipsum is simply dummy text of the printing and typesetting of the industry. Lorem Ipsum has been
+							.about__item__text
 					li.about__item
 						.about__item__image
 							svg.about__svg
@@ -85,7 +90,7 @@ block content
 							.about__item__title
 								b Профессиональный
 								|  персонал
-							.about__item__text Lorem Ipsum is simply dummy text of the printing and typesetting of the industry. Lorem Ipsum has been
+							.about__item__text
 					li.about__item
 						.about__item__image
 							svg.about__svg
@@ -94,7 +99,7 @@ block content
 							.about__item__title
 								b Бережем
 								|  Ваши деньги
-							.about__item__text Lorem Ipsum is simply dummy text of the printing and typesetting of the industry. Lorem Ipsum has been
+							.about__item__text
 	.amenities
 		.triangle.amenities__triangle__left
 			svg(viewBox="0 0 1000 500" preserveAspectRatio="none").triangle__left
@@ -120,7 +125,7 @@ block content
 			h2.map-block__title Как нас найти
 			.map
 				.map__map
-					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A226bf5e6f1b02a6b3d362d848a027b6444cabe7d6dd9fb881619164c73119136&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true")
+					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A226bf5e6f1b02a6b3d362d848a027b6444cabe7d6dd9fb881619164c73119136&amp;height=400&amp;lang=ru_RU&amp;scroll=true")
 				.map-info
 					b.map-info__title Наш адрес
 					.contact-block.map__adress
@@ -167,7 +172,7 @@ block content
 				.end__about
 					h3.end__title Об автосервисе
 					p.end__about__desc
-						| Всем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценам
+						| Техник автосервис имеет опыт работы в сфере обслуживания автомобилей уже более 20 лет. Мы регулярно обновляем свое оборудование и обучаем персонал работе с современными принципами обслуживания и ремонта автотранспорта.
 				.end__amenities
 					h3.end__title Наше меню
 					.menu.end__menu

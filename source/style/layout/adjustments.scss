@@ -11,19 +11,24 @@ html {
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   color: $textcolor;
-
-  //@include desktop {
-  //  font-size: 16px;
-  //};
-  //@include laptop {
-  //  font-size: 15px;
-  //};
-  //@include tablet {
-  //  font-size: 14px;
-  //};
-  //@include phone {
-  //  font-size: 13px;
-  //}
+  @include desktop-max() {
+    font-size: 16.5px;
+  };
+  @include desktop {
+    font-size: 16px;
+  };
+  @include desktop-mini {
+    font-size: 16px;
+  };
+  @include laptop {
+    font-size: 14px;
+  };
+  @include tablet {
+    font-size: 13px;
+  };
+  @include phone {
+    font-size: 12px;
+  }
 }
 
 body {
@@ -40,8 +45,29 @@ body {
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
+
+  @include desktop-max() {
+    width: 1200px;
+  };
+  @include desktop() {
+    width: 1090px;
+  };
+  @include desktop-mini() {
+    width: 970px;
+  };
+  @include laptop() {
+    width: 760px;
+  };
+  @include tablet() {
+    width: 470px;
+  };
+  @include phone() {
+    width: 400px;
+  };
+  @include phone-mini() {
+    width: 410px;
+  };
 }
 
 ul {

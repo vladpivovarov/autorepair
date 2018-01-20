@@ -6,11 +6,20 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: -40px;
+  @include laptop() {
+     margin-top: -40px;
+   }
+  @include phone() {
+    margin-top: -60px;
+  }
 }
 
 .end__about, .end__amenities, .end__contacts {
-  flex: 1 1 300px;
+  flex: 1 1 280px;
   margin-left: 40px;
+  margin-bottom: 40px;
   color: #c1c1c1;
 }
 
@@ -26,6 +35,12 @@
     width: 50px;
     height: 1px;
     background: $maincolor;
+    @include laptop() {
+      height: 1.8px;
+    }
+    @include tablet() {
+      height: 1.9px;
+    }
   }
 }
 

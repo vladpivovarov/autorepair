@@ -47,6 +47,9 @@
   height: 100%;
   display: flex;
   justify-content: flex-end;
+  @include phone() {
+    justify-content: center;
+  }
 }
 
 .slideshow__body {
@@ -58,6 +61,16 @@
   padding: 7% 17%;
   background: linear-gradient(-80deg, rgba(#000, 0) 0%, rgba(#000, 0) 20%, rgba(#000, .7) 20%, rgba(#000, .7) 80%, rgba(#000, 0) 80%, rgba(#000, 0) 100%);
   transition: all 1s;
+
+  @include tablet() {
+    width: 100%;
+    padding: 6% 5%;
+    background: linear-gradient(0deg, rgba(#000, 0) 0%, rgba(#000, 0) 0%, rgba(#000, .7) 0%, rgba(#000, .7) 100%, rgba(#000, 0) 100%, rgba(#000, 0) 100%);
+  }
+
+  @include phone() {
+    width: 80%;
+  }
 }
 
 .slideshow__title {
@@ -90,6 +103,15 @@
   cursor: pointer;
   background: rgba(#000, 0);
   transition: all .5s;
+
+  @include tablet() {
+    width: 60px;
+    padding: 0px 10px;
+  }
+  @include phone() {
+    width: 45px;
+    padding: 0px 5px;
+  }
 
   &:hover {
     background: rgba(#000, .7);

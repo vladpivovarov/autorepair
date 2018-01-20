@@ -10,6 +10,9 @@
   padding: 5px;
   border: 1px solid #c1c1c1;
   border-radius: 50%;
+  @include phone() {
+    padding: 4px;
+  }
 }
 
 .contact__svg {
