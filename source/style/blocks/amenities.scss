@@ -5,7 +5,10 @@
 
 .amenities__triangle__left, .amenities__triangle__right {
   position: absolute;
-  top: 0;
+  top: 0px;
+  @include laptop() {
+    top: 1px;
+  }
   transform: translateY(-100%);
   width: 50%;
   height: 70px;

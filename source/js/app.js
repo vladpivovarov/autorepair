@@ -13,13 +13,17 @@ var module = function() {
     };
 
     var media = function() {
-      var mq = window.matchMedia('@media (max-width: 768px)');
-      if(mq.matches) {
-        document.querySelector()
+      var client_w = document.body.clientWidth;
+      if(client_w < 768) {
+        document.querySelector(".left-block").classList.add("menu-active");
+        document.querySelector(".main").classList.add("main-active");
+        console.log("я меньше 768");
       } else {
-        return;
+        document.querySelector(".left-block").classList.remove("menu-active");
+        document.querySelector(".main").classList.remove("main-active");
+        console.log("я больше 768");
       }
-    }
+    };
 
     var scroll = function() {
       $("a.toForm").on("click", function (event) {
@@ -29,7 +33,7 @@ var module = function() {
         console.log($(top));
         $('body,html').animate({scrollTop: top}, 1500);
       });
-    }
+    };
 
     var mail = function() {
       $("form").submit(function() { //Change
@@ -47,7 +51,7 @@ var module = function() {
         });
         return false;
       });
-    }
+    };
 
     var addActiveClass = function() { // Когда страница загрузится
       $('a.menu__link').each(function () { // получаем все нужные нам ссылки

@@ -12,7 +12,7 @@ html {
   -webkit-font-smoothing: antialiased;
   color: $textcolor;
   @include desktop-max() {
-    font-size: 16.5px;
+    font-size: 16.6px;
   };
   @include desktop {
     font-size: 16px;
@@ -66,7 +66,7 @@ body {
     width: 400px;
   };
   @include phone-mini() {
-    width: 410px;
+    width: 380px;
   };
 }
 
