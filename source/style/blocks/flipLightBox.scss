@@ -1,9 +1,17 @@
 
+.gallery {
+  margin-left: -10px;
+}
+
+.flipLightBox {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
 
 .flipLightBox__img {
   display: inline-block;
-  width: 300px;
-  height: 250px;
+  width: 200px;
+  height: 150px;
   overflow: hidden;
 
   @include phone {
@@ -12,8 +20,10 @@
 }
 
 .flipLightBox__img img {
+  display: block;
   height: 100%;
-  min-width: 100%;
+  margin: 0 auto;
+  width: auto;
 }
 
 #flb-lightbox-text {

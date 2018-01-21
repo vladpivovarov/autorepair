@@ -78,7 +78,7 @@
     text-transform: uppercase;
     @include font-open-sans(Bold);
     letter-spacing: calc(-1px/3);
-    font-size: 13px;
+    font-size: 13.5px;
     transition: all .5s;
 
     &:after {
@@ -132,7 +132,7 @@
   background-color: rgba(#000, .8);
   transition: all 1s;
   & .menu__link {
-    font-size: 13px;
+    font-size: 13.5px;
     padding: 20px 15px;
     color: rgba(#fff,.5);
     @include laptop() {

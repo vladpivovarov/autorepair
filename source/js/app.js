@@ -15,9 +15,10 @@ var module = function() {
     var media = function() {
       var client_w = document.body.clientWidth;
       if(client_w < 768) {
+        console.log("я меньше 768");
+        document.querySelector(".logo__text").innerHTML = "Техник <br> <span class='logo__text_new'> Автосервис</span>";
         document.querySelector(".left-block").classList.add("menu-active");
         document.querySelector(".main").classList.add("main-active");
-        console.log("я меньше 768");
       } else {
         document.querySelector(".left-block").classList.remove("menu-active");
         document.querySelector(".main").classList.remove("main-active");

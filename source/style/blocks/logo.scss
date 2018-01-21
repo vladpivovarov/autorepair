@@ -15,8 +15,16 @@
 
 .logo__text {
   color: #fff;
-  font-family: Pacifico;
-  font-size: 24px;
+  @include font-open-sans(Regular);
+  font-family: 'Capture it', arial;
+  font-size: 20px;
+  letter-spacing: 0px;
+  line-height: 20px;
+  text-transform: uppercase;
+  @include phone() {
+    font-size: 18px;
+    margin-right: 20px;
+  }
 }
 
 .logo__text_new {

@@ -1,7 +1,7 @@
 extends ../_template
 
 block variables
-	- var title = 'Техник - Автосервис в Керчи'
+	- var title = 'Техник Автосервис - Авторемонт в Керчи'
 
 block content
 	header.header
@@ -10,8 +10,8 @@ block content
 				.logo__img
 					svg.logo__svg
 						use(xlink:href=`assets/img/sprite.svg#${svgId.car}`)
-				.logo__text Auto
-					span.logo__text_new Tehnik
+				.logo__text Техник
+					span.logo__text_new Автосервис
 			.address.header__address
 				.contact-block.address__contact
 					.contact__icon
@@ -41,19 +41,19 @@ block content
 			.slideshow__box.slide-show
 				.container.slideshow__container
 					.slideshow__body
-						h1.slideshow__title Ремонт авто в Керчи №1
+						h2.slideshow__title РЕМОНТ АВТО В КЕРЧИ №1
 						p.slideshow__text более 20 лет опыта в сфере ремонта и постгарантийного обслуживания
 						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_silver= button.order.about
 			.slideshow__box
 				.container.slideshow__container
 					.slideshow__body
-						h1.slideshow__title  Заботимся о клиентах
+						h2.slideshow__title  ЗАБОТИМСЯ О КЛИЕНТАХ
 						p.slideshow__text Мы ценим время и деньги наших клиентов, поэтому работаем быстро и эффективно, без наценок и переплат.
 						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_silver= button.order.about
 			.slideshow__box
 				.container.slideshow__container
 					.slideshow__body
-						h1.slideshow__title КУЗОВНОЙ РЕМОНТ
+						h2.slideshow__title КУЗОВНОЙ РЕМОНТ
 						p.slideshow__text Удалим любые повреждения и восстановим изначальный вид вашего автомобиля
 						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_silver= button.order.about
 			.slideshow__arrow.slideshow__arrow_left
@@ -65,10 +65,9 @@ block content
 	.about
 		.container.about__container
 			.about__header
-				h2.about__title
-					| Профессиональный
-					b  автосервис
-					|  в Керчи
+				h1.about__title
+					| «Техник» - Ваш
+					strong  автосервис в Керчи!
 				p.about__text
 					| Техник автосервис имеет опыт работы в сфере обслуживания автомобилей уже более 20 лет. Мы регулярно обновляем свое оборудование и обучаем персонал работе с современными принципами обслуживания и ремонта автотранспорта. Подобранная нами команда специалистов устранит большой спектр технических неисправностей, а также подготовит ваше авто к наступающему сезону. Всегда есть автохимия и масла в наличии и под заказ по разумным ценам. У нас вы можете заказать запчасти для своего авто. Для постоянных клиентов действует система лояльности. На территории автосервиса расположена комфортная комната ожидания для клиента, в которой можно выпить чашечку кофе и воспользоваться интернетом.
 				a(href=`${button.order.link}`).toForm.button.about__button.button_blue_border= button.order.text

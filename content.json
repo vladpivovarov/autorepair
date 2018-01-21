@@ -1,5 +1,5 @@
 {
-  "name": "Техник",
+  "name": "Техник Автосервис",
   "contacts": {
     "address": " ул. Орджоникидзе 151",
     "phone": " +7 (978) 717-87-02",
@@ -8,7 +8,7 @@
     "gps": " 45.307868, 36.433009"
   },
   "logo": {
-    "text": "AutoTehnik",
+    "text": "Техник Автосервис",
     "src": "logo.png"
   },
   "menu": {
@@ -48,7 +48,7 @@
     {
       "title": "Сезонное хранение резины",
       "src": "assets/img/sezon.jpg",
-      "link": "./",
+      "link": "",
       "desc": "loremlorem loremlorem lorem lorem lorem lorem lorem lorem lorem "
     },
     {
@@ -72,7 +72,7 @@
     {
       "title": "Шиномонтаж",
       "src": "assets/img/shino.jpg",
-      "link": "./",
+      "link": "rubber.html",
       "desc": "lorem lorem loremlorem lorem lorem lorem loremlorem lorem loremlorem lorem lorem lorem"
     },
     {
