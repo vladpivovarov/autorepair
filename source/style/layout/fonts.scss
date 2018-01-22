@@ -17,8 +17,9 @@ $fonts-pt-sans: "PTS55F", "PTS75F";
 }
 
 @font-face {
-  font-family: 'Capture it';
-  src: url("../fonts/capture.ttf") format ('truetype');
+  font-family: 'capture';
+  src: url('../fonts/capture.eot');
+  src: local('☺'), url('../fonts/capture.woff') format('woff'), url('../fonts/capture.ttf') format('truetype'), url('../fonts/capture.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }

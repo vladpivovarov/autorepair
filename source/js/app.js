@@ -26,15 +26,15 @@ var module = function() {
       var client_w = document.body.clientWidth;
       if(client_w < 768 & document.querySelector(".left-block")) {
         console.log("я меньше 768");
-        document.querySelector(".logo__text").innerHTML = "Техник <br> <span class='logo__text_new'> Автосервис</span>";
         document.querySelector(".left-block").classList.add("menu-active");
         document.querySelector(".main").classList.add("main-active");
+        document.querySelector(".logo__text").innerHTML = "Техник <br> <span class='logo__text_new'> Автосервис</span>";
       } else if(document.querySelector(".left-block")) {
         document.querySelector(".left-block").classList.remove("menu-active");
         document.querySelector(".main").classList.remove("main-active");
         console.log("я больше 768");
       } else {
-        return;
+        document.querySelector(".logo__text").innerHTML = "Техник <br> <span class='logo__text_new'> Автосервис</span>";
       }
     };
 
