@@ -10,19 +10,31 @@ var module = function() {
         scroll();
         creator();
         media();
+        toPrice();
+    };
+
+    var toPrice = function() {
+      $(".amenities__container a").on("click", function() {
+        var id = $(this).attr("dataId");
+        localStorage.setItem('id', id)
+      });
+      var afterId = localStorage.getItem('id')
+      $("#" + afterId).attr("checked", "checked");
     };
 
     var media = function() {
       var client_w = document.body.clientWidth;
-      if(client_w < 768) {
+      if(client_w < 768 & document.querySelector(".left-block")) {
         console.log("я меньше 768");
         document.querySelector(".logo__text").innerHTML = "Техник <br> <span class='logo__text_new'> Автосервис</span>";
         document.querySelector(".left-block").classList.add("menu-active");
         document.querySelector(".main").classList.add("main-active");
-      } else {
+      } else if(document.querySelector(".left-block")) {
         document.querySelector(".left-block").classList.remove("menu-active");
         document.querySelector(".main").classList.remove("main-active");
         console.log("я больше 768");
+      } else {
+        return;
       }
     };
 
@@ -81,7 +93,7 @@ var module = function() {
 
     var creator = function() {
       if( $("div").is(".creator")) {
-        $(".creator").html("Создано с любовью от <a href='./' class='creator__link'> Webr </a>")
+        $(".creator").html("Создано с любовью от <a href='https://vk.com/vladislavpivovarov' class='creator__link'> Webr </a>")
       } else {
         $(".footer__container").html("<div class='copyright'> 2018 Все права защищены </div> Создано с любовью от<a href='https://vk.com/vladislavpivovarov' class='creator__link'>Webr </a>")
       }

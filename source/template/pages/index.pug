@@ -113,7 +113,7 @@ block content
 					li.amenities__item
 						a(href=`${amen[i].link}`).amenities__item__link
 							.amenities__img
-								img(src=`${amen[i].src}`)
+								img(src=`${amen[i].src}` srcset=`${amen[i].srcmini} 300w`)
 							.amenities__top
 							.amenities__dop
 								.amenities__item__title= amen[i].title

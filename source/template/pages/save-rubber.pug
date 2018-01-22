@@ -1,0 +1,26 @@
+extends ../templatePages
+
+block variables
+	- var title = 'Сезонное хранение резины - Автосервис в Керчи'
+
+block titles
+	| Сезонное хранение резины
+block mainTitle
+	| Сезонное хранение резины в Керчи
+block mainDesc
+	.amenities__container
+		.mini-content
+			img.mini-content__img(src="assets/img/sezon.jpg" srcset="assets/img/mobile/sezon-min.jpg 300w")
+			p.mini-content__p
+				| Вам надоело хранить сезонную резину в гараже, на балконе тоже уже нет места?
+			p.mini-content__p
+				| Не желаете носить колеса в шиномонтаж?
+			p.mini-content__p
+				| Тогда эта услуга для вас! Помимо очевидных преимуществ мы храним ваши шины по #{" "}
+				a(href="spec.html")
+					| специальным условиям
+			p.mini-content__p
+				| Ниже вы можете ознакомиться с #{" "}
+				br
+				a(href="price.html" dataId="tab_2") прайс-листом на хранение резины в Керчи.
+

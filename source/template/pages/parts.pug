@@ -1,0 +1,17 @@
+extends ../templatePages
+
+block variables
+	- var title = 'Заказ запчастей - Автосервис в Керчи'
+
+block titles
+	| Заказ запчастей
+block mainTitle
+	| Запчасти под заказ для Вашего авто
+block mainDesc
+	.amenities__container
+		.mini-content
+			img.mini-content__img(src="assets/img/zapchasti.jpg" srcset="assets/img/mobile/zapchasti-min.jpg 300w")
+			p.mini-content__p
+				| Техник автосервис в процессе ремонта автомобиля имеет все ресурсы для организации поставки
+				| необходимых комплектующих для вашего автомобиля и может осуществить их заказ.
+				| (согласовывается с клиентом).

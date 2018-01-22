@@ -32,14 +32,23 @@
 
 .slideshow__box:nth-child(1) {
   background-image: url(../img/1.jpg);
+  @include phone() {
+    background-image: url(../img/mobile/1-min.jpg);
+  }
 }
 
 .slideshow__box:nth-child(2) {
   background-image: url(../img/2.jpg);
+  @include phone() {
+    background-image: url(../img/mobile/2-min.jpg);
+  }
 }
 
 .slideshow__box:nth-child(3) {
   background-image: url(../img/3.jpg);
+  @include phone() {
+    background-image: url(../img/mobile/3-min.jpg);
+  }
 }
 
 .slideshow__container {

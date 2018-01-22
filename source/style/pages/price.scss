@@ -1,22 +1,46 @@
-.table-price {
+.table-price table{
   width: 100% !important;
   padding: 10px !important;
-  border: 2px solid rgba(#000, .2) !important;
+  border: 2px solid rgba(#000, .1) !important;
   border-collapse: collapse;
+  overflow: auto;
 }
 
 .table-price tr{
-  border: 2px solid rgba(#000, .2) !important;
+  border: 2px solid rgba(#000, .1) !important;
+  border-collapse: collapse;
+}
+
+.table-price th{
+  padding: 10px;
+  border: 2px solid rgba(#000, .1) !important;
   border-collapse: collapse;
 }
 
 .table-price td{
   padding: 10px !important;
-  border: 2px solid rgba(#000, .2) !important;
+  border: 2px solid rgba(#000, .1) !important;
   border-collapse: collapse;
+  text-align: center;
+  &:first-child {
+    text-align: left;
+  }
+}
+
+.table-price h2 {
+  margin: 0;
+  padding: 0px;
+  text-align: center;
 }
 
 .table-price a{
   color: $textcolor;
   cursor: default;
+}
+
+
+.table-prev {
+  padding: 5px 10px 20px 10px;
+  opacity: .8;
+  font-size: 13px;
 }

@@ -48,67 +48,85 @@
     {
       "title": "Сезонное хранение резины",
       "src": "assets/img/sezon.jpg",
-      "link": "",
-      "desc": "loremlorem loremlorem lorem lorem lorem lorem lorem lorem lorem "
+      "srcmini": "assets/img/mobile/sezon-min.jpg",
+      "link": "save-rubber.html",
+      "desc": "Техник автосервис предлагает услугу «Сезонное хранение резины» в Керчи"
     },
     {
       "title": "3D развал-схождение",
       "src": "assets/img/3d.jpg",
-      "link": "./",
-      "desc": "loremlorem loremlorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+      "srcmini": "assets/img/mobile/3d-min.jpg",
+      "link": "3d.html",
+      "desc": "Техник автосервис предлагает услугу «3d развал-схождение»"
     },
     {
-      "title": "Диагностика и ремонт ходовой",
-      "src": "assets/img/hodovoy.jpg",
-      "link": "./",
-      "desc": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lore "
+      "title": "Предпродажная диагностика",
+      "src": "assets/img/diagnostics.jpg",
+      "srcmini": "assets/img/mobile/diagnostics-min.jpg",
+      "link": "diagnostics.html",
+      "desc": "Техник автосервис предлагает услугу «Предпродажная диагностика»"
     },
     {
       "title": "Запчасти под заказ",
       "src": "assets/img/zapchasti.jpg",
-      "link": "./",
-      "desc": "loremlorem lorem lorem lorem lorem lorem loremlorem lorem loremlorem lorem lorem lorem"
+      "srcmini": "assets/img/mobile/zapchasti-min.jpg",
+      "link": "parts.html",
+      "desc": "Техник автосервис предлагает услугу «Запчасти под заказ»"
     },
     {
       "title": "Шиномонтаж",
       "src": "assets/img/shino.jpg",
+      "srcmini": "assets/img/mobile/shino-min.jpg",
       "link": "rubber.html",
-      "desc": "lorem lorem loremlorem lorem lorem lorem loremlorem lorem loremlorem lorem lorem lorem"
+      "desc": "Техник автосервис предлагает услугу «Шиномонтаж»"
     },
     {
-      "title": "Сварочные работы",
-      "src": "assets/img/svarka.jpg",
-      "link": "./",
-      "desc": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem loremlorem lorem lorem lorem"
+      "title": "Замена тех. жидкостей и обслуживание",
+      "src": "assets/img/zamena.jpg",
+      "srcmini": "assets/img/mobile/zamena-min.jpg",
+      "link": "maintenance.html",
+      "desc": "Техник автосервис предлагает услугу «Замена тех. жидкостей »"
     },
     {
       "title": "Автоэлектрика",
       "src": "assets/img/avtoelektrika.jpg",
-      "link": "./",
-      "desc": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+      "srcmini": "assets/img/mobile/avtoelektrika-min.jpg",
+      "link": "auto-electrica.html",
+      "desc": "Техник автосервис предлагает услугу «Автоэлектрика»"
+    },
+    {
+      "title": "Кузовные работы",
+      "src": "assets/img/kuzov.jpg",
+      "srcmini": "assets/img/mobile/kuzov-min.jpg",
+      "link": "auto-body.html",
+      "desc": "Техник автосервис предлагает услугу «Кузовные работы»"
     }
   ],
   "gallery": {
-    "link": ["1","2","3","4","5","6","7","8","9","10","11","12"],
-    "title": ["ремонт машины","ремонт машины","ремонт машины","ремонт машины","ремонт машины","ремонт машины","ремонт машины","ремонт машины","ремонт машины","ремонт машины","ремонт машины","ремонт машины"],
+    "link": ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],
+    "title": ["Наше оборудование","Наше оборудование","Наше оборудование","Наше оборудование","Наше оборудование","Наше оборудование","Наше оборудование","Наше оборудование","Наше оборудование","Наше оборудование","Наше оборудование","Наше оборудование","Наше оборудование","Наше оборудование","Наше оборудование"],
     "desc": [
-      "это описание работы автосервиса",
-      "это описание работы автосервиса",
-      "это описание работы автосервиса",
-      "это описание работы автосервиса",
-      "это описание работы автосервиса",
-      "это описание работы автосервиса",
-      "это описание работы автосервиса",
-      "это описание работы автосервиса",
-      "это описание работы автосервиса",
-      "это описание работы автосервиса",
-      "это описание работы автосервиса",
-      "это описание работы автосервиса",
-      "это описание работы автосервиса"
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
     ]
   },
   "shop": {
     "title": ["Масла","Фильтры","Ремни","Автохимия"],
-    "src": ["oil.jpg","filtry.jpg","remni.jpg", "himia.jpg"]
+    "src": ["oil.jpg","filtry.jpg","remni.jpg", "himia.jpg"],
+    "srcmini": ["mobile/oil-min.jpg","mobile/filtry-min.jpg","mobile/remni-min.jpg", "mobile/himia-min.jpg"]
   }
 }

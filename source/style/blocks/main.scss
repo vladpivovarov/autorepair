@@ -24,6 +24,11 @@
 .main__info__button {
   margin-left: 30px;
   align-self: center;
+  @include phone() {
+    margin-left: 20px;
+    font-size: 10px !important;
+    padding: 5px;
+  }
 }
 
 .main__info__desc {
@@ -32,6 +37,14 @@
   justify-content: center;
   margin-left: 30px;
   border-left: 1px solid lighten($textcolor, 30%);
+  & .contact-block {
+    @include phone() {
+      padding-left: 10px;
+    }
+  }
+  @include phone() {
+    margin-left: 10px;
+  }
 }
 
 .contact-block_main {
@@ -48,6 +61,13 @@
 
 .main__body {
   padding: 30px;
+}
+
+.main__body__desc .amenities__container{
+  & a {
+    color: darken($textcolor,20%);
+    border-bottom: 1px solid darken($textcolor,20%);
+  }
 }
 
 .main__body__title {
@@ -73,7 +93,7 @@
     max-width: 100%;
   }
   float: left;
-  padding: 0 30px 10px 0;
+  padding: 0 30px 20px 0;
 }
 
 .mini-content__p {

@@ -1,0 +1,18 @@
+extends ../templatePages
+
+block variables
+	- var title = 'Автоэлектрик - Автосервис в Керчи'
+
+block titles
+	| Автоэлектрик
+block mainTitle
+	| Автоэлектрик для Вашего автомобиля в Керчи
+block mainDesc
+	.amenities__container
+		.mini-content
+			img.mini-content__img(src="assets/img/avtoelektrika.jpg" srcset="assets/img/mobile/avtoelektrika-min.jpg 300w")
+			p.mini-content__p
+				| Техник Автосервис предлагает установку практически любого оборудования по желанию клиента,
+				| а также диагностику и устранение неисправностей устройств и электроцепи автомобиля в Керчи.
+				br
+				a(href="price.html" dataId="tab_4") Прайс-лист на электроработы

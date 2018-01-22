@@ -3,6 +3,9 @@
     flex: 1;
   }
   & .map-info {
+    @include laptop() {
+      order: -1;
+    }
     margin-top: 0;
   }
 }

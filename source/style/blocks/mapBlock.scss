@@ -81,6 +81,7 @@
   flex: 1 1 300px;
   margin-top: 20px;
   @include laptop() {
+    flex: 1 1 100%;
     margin-left: 20px;
     margin-bottom: 20px;
   }
