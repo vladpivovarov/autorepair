@@ -24,7 +24,7 @@ var module = function() {
 
     var media = function() {
       var client_w = document.body.clientWidth;
-      if(client_w < 768 & document.querySelector(".left-block")) {
+      if(client_w < 768 && document.querySelector(".left-block")) {
         console.log("я меньше 768");
         document.querySelector(".left-block").classList.add("menu-active");
         document.querySelector(".main").classList.add("main-active");
