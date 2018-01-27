@@ -20,10 +20,12 @@
     "order": {
       "text": "Связаться с нами",
       "text2": "Бесплатный звонок",
+      "text3": "Заказать звонок",
       "about": "Подробнее",
       "link": "#form",
-      "linkFrom": "index.html#end",
-      "linkAbout": "about.html"
+      "linkFrom": "index.html#form",
+      "linkAbout": "about.html",
+      "linkNow": "#form"
     },
     "sends": {
       "text": "Отправить",
@@ -42,7 +44,8 @@
     "arrow": "arrow",
     "car": "car",
     "user": "user",
-    "hamburger": "hamburger"
+    "hamburger": "hamburger",
+    "tekhnik": "tekhnik"
   },
   "amen": [
     {
@@ -50,56 +53,56 @@
       "src": "assets/img/sezon.jpg",
       "srcmini": "assets/img/mobile/sezon-min.jpg",
       "link": "save-rubber.html",
-      "desc": "Техник автосервис предлагает услугу «Сезонное хранение резины» в Керчи"
+      "desc": "В нашем автосервисе Вы можете воспользоваться услугой «Сезонное хранение резины»"
     },
     {
       "title": "3D развал-схождение",
       "src": "assets/img/3d.jpg",
       "srcmini": "assets/img/mobile/3d-min.jpg",
       "link": "3d.html",
-      "desc": "Техник автосервис предлагает услугу «3d развал-схождение»"
+      "desc": "Современное оборудование для Вашего авто - «3d развал-схождение»"
     },
     {
       "title": "Предпродажная диагностика",
       "src": "assets/img/diagnostics.jpg",
       "srcmini": "assets/img/mobile/diagnostics-min.jpg",
       "link": "diagnostics.html",
-      "desc": "Техник автосервис предлагает услугу «Предпродажная диагностика»"
+      "desc": "Для Ваших целей мы организовали услугу -  «Предпродажная диагностика»"
     },
     {
       "title": "Запчасти под заказ",
       "src": "assets/img/zapchasti.jpg",
       "srcmini": "assets/img/mobile/zapchasti-min.jpg",
       "link": "parts.html",
-      "desc": "Техник автосервис предлагает услугу «Запчасти под заказ»"
+      "desc": "В Техник автосервис вы можете заказать нужные Вам детали"
     },
     {
       "title": "Шиномонтаж",
       "src": "assets/img/shino.jpg",
       "srcmini": "assets/img/mobile/shino-min.jpg",
       "link": "rubber.html",
-      "desc": "Техник автосервис предлагает услугу «Шиномонтаж»"
+      "desc": "Меняем шины быстро, качественно и по разумным ценам"
     },
     {
       "title": "Замена тех. жидкостей и обслуживание",
       "src": "assets/img/zamena.jpg",
       "srcmini": "assets/img/mobile/zamena-min.jpg",
       "link": "maintenance.html",
-      "desc": "Техник автосервис предлагает услугу «Замена тех. жидкостей »"
+      "desc": "Наш автосервис проводит «Замену тех. жидкостей и обслуживание»"
     },
     {
       "title": "Автоэлектрика",
       "src": "assets/img/avtoelektrika.jpg",
       "srcmini": "assets/img/mobile/avtoelektrika-min.jpg",
       "link": "auto-electrica.html",
-      "desc": "Техник автосервис предлагает услугу «Автоэлектрика»"
+      "desc": "«Автоэлектрика» - ремонт одной из важнейшей составляющей автомобиля"
     },
     {
       "title": "Кузовные работы",
       "src": "assets/img/kuzov.jpg",
       "srcmini": "assets/img/mobile/kuzov-min.jpg",
       "link": "auto-body.html",
-      "desc": "Техник автосервис предлагает услугу «Кузовные работы»"
+      "desc": "Наш автосервис проводит кузовные работы любой сложности"
     }
   ],
   "gallery": {

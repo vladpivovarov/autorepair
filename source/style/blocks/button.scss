@@ -7,13 +7,14 @@
   color: $textcolor;
   text-transform: uppercase;
   transition: all .5s;
+  cursor: pointer;
 }
 
 .button_blue_border {
   border-color: $maincolor;
   color: $maincolor;
   &:hover {
-    color: #fff !important;
+    color: #fff;
     background: $maincolor;
   }
 }

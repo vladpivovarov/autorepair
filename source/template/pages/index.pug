@@ -1,17 +1,16 @@
 extends ../_template
 
 block variables
-	- var title = 'Техник Автосервис - Авторемонт в Керчи'
+	- var title = "Автосервис в Керчи - Ваш безупречный автосервис | 'Техник автосервис'"
+	- var description = "Профессиональный автосервис 'Техник автосервис' в Керчи проведет ремонт и обслуживание автомобиля. Цены и подробности автосервиса в Керчи по тел. +7 (978) 717-87-02"
+	- var keywords = "автосервис, авторемонт, автосервис Керчь, обслуживание автомобиля"
 
 block content
 	header.header
 		.container.header__container
 			a(href="./").logo.header__logo
-				.logo__img
-					svg.logo__svg
-						use(xlink:href=`assets/img/sprite.svg#${svgId.car}`)
-				.logo__text Техник
-					span.logo__text_new Автосервис
+				.logo__img.header__logo-img
+					img(src="assets/img/logo.png")
 			.address.header__address
 				.contact-block.address__contact
 					.contact__icon
@@ -41,21 +40,17 @@ block content
 			.slideshow__box.slide-show
 				.container.slideshow__container
 					.slideshow__body
-						h2.slideshow__title РЕМОНТ АВТО В КЕРЧИ №1
-						p.slideshow__text более 20 лет опыта в сфере ремонта и постгарантийного обслуживания
-						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_silver= button.order.about
+						h2.slideshow__title
+							span.color Бесплатная #{" "}
+							| диагностика ходовой
+						p.slideshow__text Безопасность стала доступнее! Подробнее о бесплатной диагностике ходовой в нашем автосервисе можно узнать связавшись с нами.
+						a(href=`${button.order.linkNow}`).button.slideshow__button.button_blue_border.toForm= button.order.text3
 			.slideshow__box
 				.container.slideshow__container
 					.slideshow__body
-						h2.slideshow__title  ЗАБОТИМСЯ О КЛИЕНТАХ
-						p.slideshow__text Мы ценим время и деньги наших клиентов, поэтому работаем быстро и эффективно, без наценок и переплат.
-						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_silver= button.order.about
-			.slideshow__box
-				.container.slideshow__container
-					.slideshow__body
-						h2.slideshow__title КУЗОВНОЙ РЕМОНТ
-						p.slideshow__text Удалим любые повреждения и восстановим изначальный вид вашего автомобиля
-						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_silver= button.order.about
+						h2.slideshow__title Автосервис В КЕРЧИ #1
+						p.slideshow__text Уже более 20 лет наш автосервис работает в сфере ремонта и обслуживания автомобилей в Керчи
+						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_blue_border= button.order.about
 			.slideshow__arrow.slideshow__arrow_left
 				svg.slideshow__svg
 					use(xlink:href=`assets/img/sprite.svg#${svgId.arrow}`)
@@ -66,10 +61,10 @@ block content
 		.container.about__container
 			.about__header
 				h1.about__title
-					| «Техник» - Ваш
+					| «Техник автосервис» - Ваш
 					strong  автосервис в Керчи!
 				p.about__text
-					| Техник автосервис имеет опыт работы в сфере обслуживания автомобилей уже более 20 лет. Мы регулярно обновляем свое оборудование и обучаем персонал работе с современными принципами обслуживания и ремонта автотранспорта. Подобранная нами команда специалистов устранит большой спектр технических неисправностей, а также подготовит ваше авто к наступающему сезону. Всегда есть автохимия и масла в наличии и под заказ по разумным ценам. У нас вы можете заказать запчасти для своего авто. Для постоянных клиентов действует система лояльности. На территории автосервиса расположена комфортная комната ожидания для клиента, в которой можно выпить чашечку кофе и воспользоваться интернетом.
+					| Техник автосервис имеет обширный опыт ремонта и обслуживания автомобилей в Керчи на протяжении более 20 лет. Команда профессионалов нашего автосервиса выявит и устранит любые технические неисправности, подготовит Ваше авто к следующему сезону. В Техник автосервисе в Керчи Вы можете приобрести масла и автохимию по разумным ценам, а также заказать необходимые запчасти. Также нашим постоянным клиентам мы предлагаем систему лояльности. Для Вашего удобства на территории автосервиса есть комфортная комната ожидания, где Вы можете пользоваться интернетом и выпить чашечку кофе.
 				a(href=`${button.order.link}`).toForm.button.about__button.button_blue_border= button.order.text
 			ul.about__list
 					li.about__item
@@ -80,7 +75,7 @@ block content
 							.about__item__title
 								b Экономим
 								|  Ваше время
-							.about__item__text
+							.about__item__text Мы стараемся делать все работы максимально качественно и быстро
 					li.about__item
 						.about__item__image
 							svg.about__svg
@@ -89,7 +84,7 @@ block content
 							.about__item__title
 								b Профессиональный
 								|  персонал
-							.about__item__text
+							.about__item__text Все сотрудники нашего автосервиса - специалисты высокого класса
 					li.about__item
 						.about__item__image
 							svg.about__svg
@@ -98,7 +93,7 @@ block content
 							.about__item__title
 								b Бережем
 								|  Ваши деньги
-							.about__item__text
+							.about__item__text Ценим деньги клиентов и работаем честно, без наценок и переплат
 	.amenities
 		.triangle.amenities__triangle__left
 			svg(viewBox="0 0 1000 500" preserveAspectRatio="none").triangle__left
@@ -153,7 +148,7 @@ block content
 			.container.send__container
 				form(id="form").input-block.send__input-block
 					input(type="hidden" name="project_name" value="Сайт автосервиса")
-					input(type="hidden" name="admin_email" value="vladpivovarov2797@ya.ru")
+					input(type="hidden" name="admin_email" value="rusinavto@mail.ru")
 					input(type="hidden" name="form_subject" value="Заявка на обратный звонок")
 					.input.send__input
 						.input__before

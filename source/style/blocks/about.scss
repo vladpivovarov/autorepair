@@ -23,9 +23,14 @@
 }
 
 .about__button {
+  opacity: .6;
   margin-top: 20px;
-  border: 2px solid $maincolor !important;
-  color: $maincolor !important;
+  border: 2px solid $textcolor !important;
+  color: $textcolor !important;
+  &:hover {
+    background: #fff !important;
+    color: $textcolor !important;
+  }
 }
 
 .about__list {
@@ -65,7 +70,7 @@
 .about__svg {
   height: 100%;
   fill: none;
-  stroke: $textcolor;
+  stroke: rgba($maincolor, .7);
   stroke-width: 3px;
   stroke-dasharray: 0% 100%;
   transition: all 5s;
@@ -89,10 +94,18 @@
 
 .about__item__title {
   @include font-open-sans(Regular);
-  font-size: 24px;
+  font-size: 22px;
+
+  line-height: 26px;
+  color: darken(#eeeeee, 50%);
+  margin-bottom: 20px;
+  & b {
+    color: rgba($maincolor, .8);
+  }
 }
 
 .about__item__text {
   @include font-pt-sans(55);
-  font-size: 16px;
+  font-size: 14px;
+  color: darken(#eeeeee, 40%);
 }

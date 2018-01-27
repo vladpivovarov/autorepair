@@ -11,6 +11,20 @@ var module = function() {
         creator();
         media();
         toPrice();
+        toOrder();
+    };
+
+    var toOrder = function() {
+      var orderButton = document.querySelector(".order-button"),
+          orderBlock = document.querySelector(".order-block"),
+          orderClose = document.querySelector(".order-close")
+      orderButton.addEventListener("click", function() {
+        return orderBlock.classList.add("order-block_active");
+      });
+      orderClose.addEventListener("click", function() {
+        return orderBlock.classList.remove("order-block_active");
+      })
+
     };
 
     var toPrice = function() {
@@ -105,7 +119,7 @@ var module = function() {
       var left = $(".slideshow__arrow_left");
       var right = $(".slideshow__arrow_right");
       var delay = 5000;
-      var maxItem = 3;
+      var maxItem = 2;
       function next() {
         i++;
         if(i >= maxItem) {

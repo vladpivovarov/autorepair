@@ -1,10 +1,12 @@
 extends ../templatePages
 
 block variables
-	- var title = 'Заказ запчастей - Автосервис в Керчи'
+	- var title = 'Заказ автозапчастей в Керчи - Техник автосервис'
+	- var description = "Заказать запчасти для вашего автомобиля в автосервисе 'Техник автосервис'. Предоставим нужные автозапчасти. Заполнить форму заказа запчасти или по тел. +7 (978) 717-87-02"
+	- var keywords = "автозапчасти керчь, запчасти для авто купить, автозапчасти, обслуживание автомобиля запчасти"
 
 block titles
-	| Заказ запчастей
+	| Заказ автозапчастей
 block mainTitle
 	| Запчасти под заказ для Вашего авто
 block mainDesc
@@ -15,3 +17,33 @@ block mainDesc
 				| Техник автосервис в процессе ремонта автомобиля имеет все ресурсы для организации поставки
 				| необходимых комплектующих для вашего автомобиля и может осуществить их заказ.
 				| (согласовывается с клиентом).
+			.button.button_blue_bg.order-button Заказать запчасть
+block order-block
+	.send__container.order-block
+		form(id="form").input-block.send__input-block
+			.order-close
+				svg.order__arrow-right
+					use(xlink:href=`assets/img/sprite.svg#${svgId.arrow}`)
+				svg.order__arrow-left
+					use(xlink:href=`assets/img/sprite.svg#${svgId.arrow}`)
+			input(type="hidden" name="project_name" value="Сайт автосервиса")
+			input(type="hidden" name="admin_email" value="rusinavto@mail.ru")
+			input(type="hidden" name="form_subject" value="Заказ детали с сайта")
+			.input.send__input
+				.input__before
+					svg.input__svg
+						use(xlink:href=`assets/img/sprite.svg#${svgId.user}`)
+				input(type="text" name="Имя" placeholder="Ваше имя" required)
+			.input.send__input
+				.input__before
+					svg.input__svg
+						use(xlink:href=`assets/img/sprite.svg#${svgId.phone}`)
+				input(type="text" name="Телефон" placeholder="Ваш телефон" required)
+			.input.send__input
+				.input__before
+					svg.input__svg
+						use(xlink:href=`assets/img/sprite.svg#${svgId.car}`)
+				input(type="text" name="Марка автомобиля" placeholder="Марка автомобиля" required)
+			.input.send__input
+				textarea(name="Описание детали" placeholder="Опишите Вашу деталь" required).textarea
+			input(type="submit" value="Заказать деталь").button.send__button.button_blue_bg

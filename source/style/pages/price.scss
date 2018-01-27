@@ -9,6 +9,12 @@
 .table-price tr{
   border: 2px solid rgba(#000, .1) !important;
   border-collapse: collapse;
+  &:nth-child(odd) {
+    background: rgba(lightgray, .2);
+  }
+  &:hover {
+    background: rgba($maincolor, .1);
+  }
 }
 
 .table-price th{

@@ -83,18 +83,42 @@
 }
 
 .slideshow__title {
+  position: relative;
   margin-bottom: 20px;
-  @include font-open-sans(Bold);
-  font-size: 42px;
+  text-transform: uppercase;
+  font-family: capture, arial;
+  font-size: 44px;
   color: rgba(#fff, .8);
-  font-style: italic;
-  letter-spacing: -0.4px;
+  letter-spacing: -0px;
   transition: all .5s;
+  @include phone() {
+    font-size: 40px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    opacity: .8;
+    background: $maincolor;
+    transform: rotate(10deg);
+    @include tablet() {
+      transform: rotate(0deg);
+      right: -15px;
+    }
+  }
+}
+
+.color {
+  color: $maincolor;
 }
 
 .slideshow__text {
   font-size: 14px;
-  color: rgba(#fff, .6);
+  color: rgba(#fff, .5);
   transition: all .5s;
 }
 
@@ -136,8 +160,6 @@
 .slideshow__button {
   align-self: flex-end;
   margin-top: 40px;
-  border-color: #c1c1c1;
-  color: #c1c1c1;
 }
 
 .slide-show {

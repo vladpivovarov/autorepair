@@ -68,7 +68,8 @@
 #tab_11:checked ~ #tab_l11,
 #tab_12:checked ~ #tab_l12,
 #tab_13:checked ~ #tab_l13,
-#tab_14:checked ~ #tab_l14{
+#tab_14:checked ~ #tab_l14,
+#tab_15:checked ~ #tab_l15{
   background: #fff;
   border-color: #fff;
   top: 0;
@@ -111,7 +112,8 @@
 #tab_11:checked ~ .tabs_cont #tab_c11,
 #tab_12:checked ~ .tabs_cont #tab_c12,
 #tab_13:checked ~ .tabs_cont #tab_c13,
-#tab_14:checked ~ .tabs_cont #tab_c14{
+#tab_14:checked ~ .tabs_cont #tab_c14,
+#tab_15:checked ~ .tabs_cont #tab_c15{
   position: static;
   left: 0;
   opacity: 1;}

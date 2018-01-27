@@ -11,16 +11,24 @@
 
 .left-block__logo {
   display: flex;
-  justify-content:center;
+  justify-content: flex-start;
   align-items: center;
   height: 100px;
-  margin-left: -10px;
   margin-bottom: 27px;
   background: #252323;
   & .logo__text {
     line-height: 19px;
     font-size: 19px;
   }
+}
+
+.left-block__img {
+  width: 140px;
+  height: 80px;
+}
+
+.left__logo {
+  margin-left: 30px;
 }
 
 .left-block__menu {

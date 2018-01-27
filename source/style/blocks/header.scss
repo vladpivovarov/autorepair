@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+.header__logo-img {
+  margin: 8px 0 10px -10px;
+}
+
 .header__address {
   align-items: flex-start;
   & .contact-block {

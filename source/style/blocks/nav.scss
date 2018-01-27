@@ -16,6 +16,7 @@
     }
     @include laptop() {
       margin-top: 8px;
+      width: 120px;
     }
   }
 }
@@ -73,13 +74,13 @@
 
   & .menu__link {
     position: relative;
-    padding: 30px 15px;
+    padding: 20px 15px;
     color: $textcolor;
     text-transform: uppercase;
     @include font-open-sans(Bold);
     letter-spacing: calc(-1px/3);
     font-size: 13.5px;
-    transition: all .5s;
+    transition: all .0s;
 
     &:after {
       content: "";
@@ -121,6 +122,15 @@
   height: auto;
   opacity: 1;
   transition: all .5s;
+  & .menu__list {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+  & .menu__link {
+    min-width: 150px;
+    font-size: 16px;
+  }
 }
 
 .fixed {
@@ -132,7 +142,6 @@
   background-color: rgba(#000, .8);
   transition: all 1s;
   & .menu__link {
-    font-size: 13.5px;
     padding: 20px 15px;
     color: rgba(#fff,.5);
     @include laptop() {
@@ -141,6 +150,9 @@
   }
   & .active {
     color: $maincolor;
+    & .nav__link {
+      font-size: 16px;
+    }
   }
   &:after {
     background-color: rgba(#000, .8) !important;

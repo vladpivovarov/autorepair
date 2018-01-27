@@ -1,7 +1,9 @@
 extends ../templatePages
 
 block variables
-	- var title = 'Прием на работу - Автосервис в Керчи'
+	- var title = 'Автомагазин в Керчи - Техник автосервис'
+	- var description = "Автомагазин от 'Техник автосервис' в Керчи. Товары для ремонта и обслуживания авто в нашем автомагазине. Цены и подробности можно узнать по тел. +7 (978) 717-87-02"
+	- var keywords = "автомагазин, автомагазин Керчь, автосервис-автомагазин Керчь, автотовары, купить автозапчасти Керчь, автообслуживание товары"
 
 block titles
 	| Магазин
@@ -9,15 +11,17 @@ block mainTitle
 	| Наш автомагазин
 block mainDesc
 	.mini-content
-		img.mini-content__img.mini-content__img_shop(src="assets/img/shop.png" srcset="assets/img/mobile/shop-min.jpg 300w")
+		img.mini-content__img.mini-content__img_shop(src="assets/img/shop.png" srcset="assets/img/mobile/shop-min.png 300w")
 		p.mini-content__p
-			| В Керчи по разумным ценамВсем привет я маленькое описание вашего сайта Профессиональный ремонт автомобилей в Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумнымремонт автомобилей в Керчи по разумнымремонт автомобилей в Керчи по разумным ремонт автомобилей в Керчи по разумным
+			| В нашем автосервисе  в Керчи Вы можете приобрести широкий ассортимент автотоваров, а именно масла, фильтры, различную автохимию.
 		p.mini-content__p
-			| Керчи по разумным ценам Профессиональный ремонт автомобилей в Керчи по разумным ценамв Керчи по разумным ценам
+			| Также Вы без труда можете заказать соответствующие запчасти для Вашего автомобиля.
 	h3  У нас вы можете приобрести такие товары, как:
 	ul.shop__list
 		- for(var i = 0; i < shop.title.length; i++)
 			li.shop__item
 				b.shop__title= shop.title[i]
 				.shop__img-block
-					img(src=`assets/img/${shop.src[i]}` srcset=`${shop.srcmini[i]} 300w`).shop__img
+					img(src=`assets/img/${shop.src[i]}` srcset=`assets/img/${shop.srcmini[i]} 300w`).shop__img
+	p.mini-content__p
+		| И многое другое.

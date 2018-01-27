@@ -5,15 +5,15 @@ html
 	head
 		meta(charset="utf-8")
 		title= title
-		meta(content="Vladislav" name="author")
-		meta(content="" name="description")
-		meta(content="" name="keywords")
+		meta(content="WebR" name="author")
+		meta(content=`${description}` name="description")
+		meta(content=`${keywords}` name="keywords")
 		meta(content="width=device-width, initial-scale=1" name="viewport")
 		meta(content="ie=edge" http-equiv="x-ua-compatible")
-
 		//- favicon block start
+		link(rel="icon" href="assets/img/favicon.png" type="image/x-icon")
+		link(rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon")
 		//- favicon block end
-		//link(href="http://allfont.ru/allfont.css?fonts=capture-it" rel="stylesheet" type="text/css")
 		link(rel='stylesheet' href='assets/css/foundation.css')
 		link(rel='stylesheet' href='assets/css/app.css')
 		script(src='assets/js/foundation.js' defer)
@@ -26,13 +26,9 @@ html
 		.wrapper
 			.left-block
 				.left-block__logo
-					a(href="./").logo
-						.logo__img
-							svg.logo__svg
-								use(xlink:href=`assets/img/sprite.svg#${svgId.car}`)
-						.logo__text Техник
-							br
-							span.logo__text_new Автосервис
+					a(href="./").logo.left__logo
+						.logo__img.left-block__img
+							img(src="assets/img/logo.png")
 				.menu.left-block__menu
 					ul.menu__list
 						- for(var i = 0; i < menu.text.length; i++)
@@ -71,4 +67,5 @@ html
 						block mainTitle
 					.main__body__desc
 						block mainDesc
+			block order-block
 

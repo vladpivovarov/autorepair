@@ -72,8 +72,9 @@
 
 .main__body__title {
   color: rgba(#2a2828, .9);
-  border-bottom: 2px solid lighten(#2a2828, 70%);
+  border-bottom: 2px solid lighten($maincolor, 20%);
   margin-bottom: 30px;
+  padding-bottom: 5px;
 }
 
 .main-active {
