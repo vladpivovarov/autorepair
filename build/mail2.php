@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Обратная связь</title>
+    <title>Заказ на деталь</title>
 </head>
 
 <body>
@@ -14,14 +14,14 @@ function send_mail()
 {
     $phone = htmlspecialchars($_REQUEST['phone']);
 }
-$message = '<b>Имя пославшего: </b>'.$_REQUEST['name'].'<br> <b>Телефон: </b>'.$_REQUEST['phone'].'';
+$message = '<b>Имя: </b>'.$_REQUEST['name'].'<br> <b>Телефон: </b>'.$_REQUEST['phone'].'';
 
 include "class.phpmailer.php";// подключаем класс
 
 $mail = new PHPMailer();
 $mail->From = $_REQUEST['phone'];
 $mail->FromName = $_REQUEST['name'];
-$mail->AddAddress('vladpivovarov2797@mail.ru');
+$mail->AddAddress('texnik.avtoservis@mail.ru');
 $mail->IsHTML(true);
 $mail->Subject = $_POST['title'];
 
@@ -35,7 +35,7 @@ if(isset($_FILES['files']))
 $mail->Body = $message;
 if (!$mail->Send()) die ('Mailer Error: '.$mail->ErrorInfo);
 {
-    echo '<center><b>Спасибо за отправку вашего сообщения<br><a href=index.html>Нажмите</a>, чтобы вернуться на главную страницу';
+    echo '<center><b>Спасибо за Ваш заказ! В ближайшее время мы свяжемся с Вами.<br><a href=index.html>Нажмите</a>, чтобы вернуться на главную страницу';
 }
 if (!empty($_POST['submit'])) send_mail();
 ?>

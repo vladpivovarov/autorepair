@@ -83,7 +83,10 @@ var module = function() {
           url: "mail.php", //Change
           data: th.serialize()
         }).done(function() {
-          alert("Thank you!");
+          alert("Спасибо за Ваш заказ! В ближайшее время мы свяжемся с Вами");
+          var orderBlock = document.querySelector(".order-block");
+          orderBlock.classList.remove("order-block_active");
+
           setTimeout(function() {
             // Done Functions
             th.trigger("reset");
