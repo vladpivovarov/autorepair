@@ -17,7 +17,15 @@ block mainDesc
 				| Техник автосервис в процессе ремонта автомобиля имеет все ресурсы для организации поставки
 				| необходимых комплектующих для вашего автомобиля и может осуществить их заказ.
 				| (согласовывается с клиентом).
+				br
+				| Заполните простую форму заказа
 			.button.button_blue_bg.order-button Заказать запчасть
+
+		p.mini-content__p
+			| или
+			br
+			| Отошлите фото техпаспорта и наш менеджер свяжется с вами и согласует заказ
+		.button.button_blue_bg.order-button-img Заказать запчасть
 block order-block
 	.send__container.order-block
 		form(id="form").input-block.send__input-block
@@ -42,8 +50,42 @@ block order-block
 			.input.send__input
 				.input__before
 					svg.input__svg
-						use(xlink:href=`assets/img/sprite.svg#${svgId.car}`)
+						use(xlink:href=`assets/img/sprite.svg#${svgId.model}`)
 				input(type="text" name="Марка автомобиля" placeholder="Марка автомобиля" required)
+			.input.send__input
+				.input__before
+					svg.input__svg
+						use(xlink:href=`assets/img/sprite.svg#${svgId.code}`)
+				input(type="text" name="VIN код" placeholder="VIN код" required)
+			.input.send__input
+				.input__before
+					svg.input__svg
+						use(xlink:href=`assets/img/sprite.svg#${svgId.piston}`)
+				input(type="text" name="Марка-Модель" placeholder="Марка-Модель" required)
 			.input.send__input
 				textarea(name="Описание детали" placeholder="Опишите Вашу деталь" required).textarea
 			input(type="submit" value="Заказать деталь").button.send__button.button_blue_bg
+			p.form-paragraf
+				| Персональные данные используются исключительно с целью оказания консультации и для предоставления услуг автосервиса. Для подтверждения Вашего согласия на обработку данных нажмите "Заказать деталь".
+
+	.send__container.order-block2
+		form(form action="mail2.php" method="post" enctype="multipart/form-data").input-block.send__input-block
+			.order-close2
+				svg.order__arrow-right
+					use(xlink:href=`assets/img/sprite.svg#${svgId.arrow}`)
+				svg.order__arrow-left
+					use(xlink:href=`assets/img/sprite.svg#${svgId.arrow}`)
+			.input.send__input
+				.input__before
+					svg.input__svg
+						use(xlink:href=`assets/img/sprite.svg#${svgId.user}`)
+				input(type="text" name="name" placeholder="Ваше имя" required)
+			.input.send__input
+				.input__before
+					svg.input__svg
+						use(xlink:href=`assets/img/sprite.svg#${svgId.phone}`)
+				input(type="text" name="phone" placeholder="Ваш телефон" required)
+			input(type="file" name="files").button-file
+			input(type="submit" value="Заказать деталь").button.send__button
+			p.form-paragraf
+				| Персональные данные используются исключительно с целью оказания консультации и для предоставления услуг автосервиса. Для подтверждения Вашего согласия на обработку данных нажмите "Заказать деталь"

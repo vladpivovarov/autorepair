@@ -38,6 +38,52 @@
   }
 }
 
+.order-block2 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  left: -99999px;
+  top: -999999px;
+  transition: opacity .5s;
+  opacity: .1;
+  z-index: 10;
+
+  & .send__input-block {
+    width: 320px;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(#000, .5);
+  }
+  & .input, .send__button, .textarea{
+    width: 100%;
+    margin-right: 0;
+    height: auto;
+  }
+
+  & .textarea {
+    height: 80px;
+    max-width: 100%;
+    padding: 10px;
+    color: $textcolor;
+  }
+
+  & .send__button {
+    height: 40px;
+  }
+  & .button-file {
+    width: 100%;
+    margin-right: 0;
+    height: 40px;
+  }
+}
+
+
 .order-block_active {
   top: 50%;
   left: 50%;
@@ -46,6 +92,17 @@
 }
 
 .order-close {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  opacity: .8;
+  cursor:pointer;
+}
+
+.order-close2 {
   position: absolute;
   top: -50px;
   right: -50px;

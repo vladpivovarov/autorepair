@@ -12,6 +12,7 @@ var module = function() {
         media();
         toPrice();
         toOrder();
+        toOrderJpg();
     };
 
     var toOrder = function() {
@@ -26,6 +27,19 @@ var module = function() {
       })
 
     };
+
+  var toOrderJpg = function() {
+    var orderButton = document.querySelector(".order-button-img"),
+        orderBlock = document.querySelector(".order-block2"),
+        orderClose = document.querySelector(".order-close2")
+    orderButton.addEventListener("click", function() {
+      return orderBlock.classList.add("order-block_active");
+    });
+    orderClose.addEventListener("click", function() {
+      return orderBlock.classList.remove("order-block_active");
+    })
+
+  };
 
     var toPrice = function() {
       $(".amenities__container a").on("click", function() {
@@ -42,13 +56,12 @@ var module = function() {
         console.log("я меньше 768");
         document.querySelector(".left-block").classList.add("menu-active");
         document.querySelector(".main").classList.add("main-active");
-        document.querySelector(".logo__text").innerHTML = "Техник <br> <span class='logo__text_new'> Автосервис</span>";
       } else if(document.querySelector(".left-block")) {
         document.querySelector(".left-block").classList.remove("menu-active");
         document.querySelector(".main").classList.remove("main-active");
         console.log("я больше 768");
       } else {
-        document.querySelector(".logo__text").innerHTML = "Техник <br> <span class='logo__text_new'> Автосервис</span>";
+        console.log("nothing");
       }
     };
 
@@ -63,7 +76,7 @@ var module = function() {
     };
 
     var mail = function() {
-      $("form").submit(function() { //Change
+      $("#form").submit(function() { //Change
         var th = $(this);
         $.ajax({
           type: "POST",
