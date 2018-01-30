@@ -59,12 +59,12 @@ html
 				.menu.left-block__menu
 					ul.menu__list
 						- for(var i = 0; i < menu.text.length; i++)
-						li.menu__item
-							a(href=`${menu.link[i]}`).menu__link.left__menu__item.contact-block
-								.contact__icon
-									svg.contact__svg
-										use(xlink:href=`assets/img/sprite.svg#${menu.svg[i]}`)
-								.contact__text= menu.text[i]
+							li.menu__item
+								a(href=`${menu.link[i]}`).menu__link.left__menu__item.contact-block
+									.contact__icon
+										svg.contact__svg
+											use(xlink:href=`assets/img/sprite.svg#${menu.svg[i]}`)
+									.contact__text= menu.text[i]
 					a(href="./").left-block__out
 			.main
 				.main__header
