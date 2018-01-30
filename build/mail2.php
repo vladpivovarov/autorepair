@@ -27,7 +27,7 @@ include "class.phpmailer.php";// подключаем класс
 $mail = new PHPMailer();
 $mail->From = iconv('UTF-8', 'cp1251', $_REQUEST['phone']);
 $mail->FromName = iconv('UTF-8', 'cp1251', $_REQUEST['name']);
-$mail->AddAddress('vladpivovarov2797@ya.ru');
+$mail->AddAddress('texnik.avtoservis@mail.ru');
 $mail->IsHTML(true);
 $mail->Subject = $_POST['title'];
 
