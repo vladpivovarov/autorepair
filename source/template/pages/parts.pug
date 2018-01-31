@@ -50,11 +50,6 @@ block order-block
 			.input.send__input
 				.input__before
 					svg.input__svg
-						use(xlink:href=`assets/img/sprite.svg#${svgId.model}`)
-				input(type="text" name="Марка автомобиля" placeholder="Марка автомобиля" required)
-			.input.send__input
-				.input__before
-					svg.input__svg
 						use(xlink:href=`assets/img/sprite.svg#${svgId.code}`)
 				input(type="text" name="VIN код" placeholder="VIN код" required)
 			.input.send__input
@@ -70,6 +65,7 @@ block order-block
 
 	.send__container.order-block2
 		form(form action="mail2.php" method="post" enctype="multipart/form-data").input-block.send__input-block
+			input(type="hidden" name="title" value="Заказ детали")
 			.order-close2
 				svg.order__arrow-right
 					use(xlink:href=`assets/img/sprite.svg#${svgId.arrow}`)
@@ -85,6 +81,8 @@ block order-block
 					svg.input__svg
 						use(xlink:href=`assets/img/sprite.svg#${svgId.phone}`)
 				input(type="text" name="phone" placeholder="Ваш телефон" required)
+			.input.send__input
+				textarea(name="desc" placeholder="Опишите Вашу деталь" required).textarea
 			input(type="file" name="files").button-file
 			input(type="submit" value="Заказать деталь").button.send__button
 			p.form-paragraf

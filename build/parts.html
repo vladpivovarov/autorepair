@@ -191,14 +191,6 @@
           <div class="input send__input">
             <div class="input__before">
               <svg class="input__svg">
-                <use xlink:href="assets/img/sprite.svg#model"></use>
-              </svg>
-            </div>
-            <input type="text" name="Марка автомобиля" placeholder="Марка автомобиля" required>
-          </div>
-          <div class="input send__input">
-            <div class="input__before">
-              <svg class="input__svg">
                 <use xlink:href="assets/img/sprite.svg#code"></use>
               </svg>
             </div>
@@ -221,6 +213,7 @@
       </div>
       <div class="send__container order-block2">
         <form class="input-block send__input-block" form action="mail2.php" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="title" value="Заказ детали">
           <div class="order-close2">
             <svg class="order__arrow-right">
               <use xlink:href="assets/img/sprite.svg#arrow"></use>
@@ -244,6 +237,9 @@
               </svg>
             </div>
             <input type="text" name="phone" placeholder="Ваш телефон" required>
+          </div>
+          <div class="input send__input">
+            <textarea class="textarea" name="desc" placeholder="Опишите Вашу деталь" required></textarea>
           </div>
           <input class="button-file" type="file" name="files">
           <input class="button send__button" type="submit" value="Заказать деталь">
