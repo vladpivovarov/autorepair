@@ -24,7 +24,7 @@ function send_mail()
     $desc = htmlspecialchars($_REQUEST['desc']);
 }
 
-$message = iconv('UTF-8', 'cp1251', "<b>Заказ на деталь</b><br><b>Имя: </b> ").iconv('UTF-8', 'cp1251', $_REQUEST['name']).iconv('UTF-8', 'cp1251', "<br> <b>Телефон: </b>").iconv('UTF-8', 'cp1251', $_REQUEST['phone']).iconv('UTF-8', 'cp1251', $_REQUEST['desc']).'';
+$message = iconv('UTF-8', 'cp1251', "<b>Заказ на деталь</b><br><b>Имя: </b> ").iconv('UTF-8', 'cp1251', $_REQUEST['name']).iconv('UTF-8', 'cp1251', "<br> <b>Телефон: </b>").iconv('UTF-8', 'cp1251', $_REQUEST['phone']).iconv('UTF-8', 'cp1251', "<br> <b>Описание детали: </b>").iconv('UTF-8', 'cp1251', $_REQUEST['desc']).'';
 
 include "class.phpmailer.php";// подключаем класс
 
@@ -32,9 +32,9 @@ $mail = new PHPMailer();
 $mail->From = iconv('UTF-8', 'cp1251', $_REQUEST['phone']);
 $mail->FromName = iconv('UTF-8', 'cp1251', $_REQUEST['name']);
 $mail->FromDesc = iconv('UTF-8', 'cp1251', $_REQUEST['desc']);
-$mail->AddAddress('vladpivovarov2797@ya.ru');
+$mail->AddAddress('texnik.avtoservis@mail.ru');
 $mail->IsHTML(true);
-$mail->Subject = $_POST['title'];
+$mail->Subject = iconv('UTF-8', 'cp1251', $_POST['title']);
 
 if(isset($_FILES['files']))
 {
