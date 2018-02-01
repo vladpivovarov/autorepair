@@ -3,14 +3,14 @@ extends ../_template
 block variables
 	- var title = "«Техник автосервис» - Ваш автосервис в Керчи"
 	- var description = "Профессиональный автосервис 'Техник автосервис' в Керчи проведет ремонт и обслуживание автомобиля. Цены и подробности автосервиса в Керчи по тел. +7 (978) 717-87-02"
-	- var keywords = "автосервис, авторемонт, автосервис Керчь, обслуживание автомобиля"
+	- var keywords = "автосервис, авторемонт, автосервис Керчь, обслуживание автомобиля, автосервис в Керчи, сто в Керчи, авторемонт в Керчи, обслуживание автомобиля в Керчи"
 
 block content
 	header.header
 		.container.header__container
 			a(href="./").logo.header__logo
 				.logo__img.header__logo-img
-					img(src="assets/img/logo.png")
+					img(src="assets/img/logo.png" alt="автосервис в Керчи - СТО Техник автосервис" title="техник автосервис в Керчи")
 			.address.header__address
 				.contact-block.address__contact
 					.contact__icon
@@ -48,13 +48,13 @@ block content
 						h2.slideshow__title
 							span.color Бесплатная #{" "}
 							| диагностика ходовой
-						p.slideshow__text Безопасность стала доступнее! Подробнее о бесплатной диагностике ходовой в нашем автосервисе можно узнать связавшись с нами.
+						p.slideshow__text Безопасность стала доступнее! Подробнее о бесплатной диагностике ходовой в нашем автосервисе Керчи можно узнать связавшись с нами.
 						a(href=`${button.order.linkNow}`).button.slideshow__button.button_blue_border.toForm= button.order.text3
 			.slideshow__box
 				.container.slideshow__container
 					.slideshow__body
 						h2.slideshow__title Гарантия качества
-						p.slideshow__text Уже более 20 лет наш автосервис работает в сфере ремонта и обслуживания автомобилей в Керчи
+						p.slideshow__text Уже более 20 лет наш автосервис в Керчи работает в сфере ремонта и обслуживания автомобилей и имеет обширный опыт работы.
 						a(href=`${button.order.linkAbout}`).button.slideshow__button.button_blue_border= button.order.about
 			.slideshow__arrow.slideshow__arrow_left
 				svg.slideshow__svg
@@ -66,10 +66,10 @@ block content
 		.container.about__container
 			.about__header
 				h1.about__title
-					| «Техник автосервис» - Ваш
+					| Техник автосервис -
 					strong  автосервис в Керчи!
 				p.about__text
-					| Техник автосервис имеет большой опыт ремонта и обслуживания автомобилей в Керчи. Команда профессионалов нашего автосервиса выявит и устранит большой спектр технических неисправностей. В Техник автосервисе в Керчи Вы можете приобрести масла и автохимию по оптовым ценам, а также заказать необходимые для ремонта комплектующие. Система скидок нашего автосервиса приятно радует наши постоянных клиентов. Для Вашего удобства на территории автосервиса есть комфортная комната ожидания, где Вы можете получить доступ к интернету и выпить чашечку кофе.
+					| Техник автосервис имеет большой опыт ремонта и обслуживания автомобилей в Керчи. Команда профессионалов нашего автосервиса выявит и устранит широкий спектр технических неисправностей. В Техник автосервис в Керчи Вы можете приобрести масла и автохимию по оптовым ценам, а также заказать необходимые для ремонта комплектующие. Система скидок нашего автосервиса приятно радует наши постоянных клиентов. Для Вашего удобства на территории автосервиса есть комфортная комната ожидания, где Вы можете получить доступ к интернету и выпить чашечку кофе.
 				a(href=`${button.order.link}`).toForm.button.about__button.button_blue_border= button.order.text
 			ul.about__list
 					li.about__item
@@ -89,7 +89,7 @@ block content
 							.about__item__title
 								b Профессиональный
 								|  персонал
-							.about__item__text Все сотрудники нашего автосервиса - специалисты высокого класса
+							.about__item__text Все сотрудники нашего автосервиса - специалисты высокого класса с большим опытом работы
 					li.about__item
 						.about__item__image
 							svg.about__svg
@@ -98,7 +98,7 @@ block content
 							.about__item__title
 								b Бережем
 								|  Ваши деньги
-							.about__item__text Ценим деньги клиентов и работаем честно, без наценок и переплат
+							.about__item__text Мы ценим деньги клиентов и работаем честно, без наценок и переплат
 	.amenities
 		.triangle.amenities__triangle__left
 			svg(viewBox="0 0 1000 500" preserveAspectRatio="none").triangle__left
@@ -107,13 +107,13 @@ block content
 			svg(viewBox="0 0 1000 500" preserveAspectRatio="none").triangle__right
 				polygon(points="0,500 1000,500 1000,0")
 		.container.amenities__container
-			h2.amenities__title Все услуги "СТО Техник"
+			h2.amenities__title Все услуги СТО "Техник автосервис"
 			ul.amenities__list
 				- for (var i = 0; i < amen.length; i++)
 					li.amenities__item
 						a(href=`${amen[i].link}`).amenities__item__link
 							.amenities__img
-								img(src=`${amen[i].src}` srcset=`${amen[i].srcmini} 300w`)
+								img(src=`${amen[i].src}` srcset=`${amen[i].srcmini} 300w` alt="услуги автосервиса в Керчи" title="услуги автосервиса по ремонту и обслуживанию автомобилей в Керчи")
 							.amenities__top
 							.amenities__dop
 								.amenities__item__title= amen[i].title
@@ -121,7 +121,7 @@ block content
 								.button.amenities__button= button.order.about
 	.map-block
 		.container.map-block__container
-			h2.map-block__title Как нас найти
+			h2.map-block__title Как найти наш автосервис
 			.map
 				.map__map
 					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A226bf5e6f1b02a6b3d362d848a027b6444cabe7d6dd9fb881619164c73119136&amp;height=400&amp;lang=ru_RU&amp;scroll=true")
@@ -171,7 +171,7 @@ block content
 				.end__about
 					h3.end__title Об автосервисе
 					p.end__about__desc
-						| Техник автосервис имеет опыт работы в сфере обслуживания автомобилей уже более 20 лет. Мы регулярно обновляем свое оборудование и обучаем персонал работе с современными принципами обслуживания и ремонта автотранспорта.
+						| Техник автосервис имеет действитеьно большой опыт работы в сфере обслуживания автомобилей различных марок/моделей в Керчи на протяжении уже более двадцати с лишним лет лет. И докозательство тому - положительные отзывы и сарафанное радио. Наш автосервис предоставляет услуги максимально комфортно для наших клиентов - есть комната отдыха с WiFi и кофем. Мы стараемся максимально регулярно обновлять свое оборудование для качественного сервиса, обучаем наш персонал эффективной работе с современными принципами и тенденциями обслуживания и ремонта автотранспорта в нашем городе-герое Керчь.
 				.end__amenities
 					h3.end__title Наше меню
 					.menu.end__menu
@@ -180,7 +180,7 @@ block content
 								li.menu__item
 									a(href=`${menu.link[i]}`).menu__link= menu.text[i]
 				.end__contacts
-					h3.end__title Контакты и время работы
+					h3.end__title Контакты и время работы автосервиса
 					.contact-block.end__home
 						.contact__icon
 							svg.contact__svg
