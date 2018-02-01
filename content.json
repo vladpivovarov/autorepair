@@ -3,7 +3,7 @@
   "contacts": {
     "address": " ул. Орджоникидзе 151",
     "phone": " +7 (978) 717-87-02",
-    "mail": " texnik.avtoservis@mail.ru",
+    "mail": " tehnik.avtoservis@yandex.ru",
     "times": " Пн - Сб: 8:00 - 19:00, Вс: 9:00 - 17:00",
     "gps": " 45.307868, 36.433009"
   },
@@ -12,9 +12,9 @@
     "src": "logo.png"
   },
   "menu": {
-    "text": ["Главная","О нас","Услуги", "Магазин", "Галерея","Прайс-лист","Вакансии", "Контакты"],
-    "link": ["./","about.html","amenities.html", "shop.html", "gallery.html","price.html","vacancy.html", "contacts.html"],
-    "svg": ["main","about","prophesy", "shop", "gallery","price", "vacancy", "where"]
+    "text": ["Главная","О нас","Услуги", "Магазин", "Галерея", "Проверка авто", "Прайс-лист","Вакансии", "Контакты"],
+    "link": ["./","about.html","amenities.html", "shop.html", "gallery.html", "https://xn--90adear.xn--p1ai/check/auto/", "price.html","vacancy.html", "contacts.html"],
+    "svg": ["main","about","prophesy", "shop", "gallery", "checked-car", "price", "vacancy", "where"]
   },
   "button": {
     "order": {
@@ -48,7 +48,8 @@
     "tekhnik": "tekhnik",
     "code": "code",
     "piston": "piston",
-    "model": "model"
+    "model": "model",
+    "checked-car": "checked-car"
   },
   "amen": [
     {

@@ -12,7 +12,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 $c = true;
 if ( $method === 'POST' ) {
     $project_name = trim($_POST["project_name"]);
-    $admin_email  = trim($_POST["admin_email"]);
+    $admin_email  = "tehnik.avtoservis@yandex.ru";
     $form_subject = trim($_POST["form_subject"]);
     foreach ( $_POST as $key => $value ) {
         if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {

@@ -86,6 +86,13 @@
                   </svg>
                 </div>
                 <div class="contact__text">Галерея</div></a></li>
+            <li class="menu__item"><a class="menu__link left__menu__item contact-block" href="https://xn--90adear.xn--p1ai/check/auto/">
+                <div class="contact__icon">
+                  <svg class="contact__svg">
+                    <use xlink:href="assets/img/sprite.svg#checked-car"></use>
+                  </svg>
+                </div>
+                <div class="contact__text">Проверка авто</div></a></li>
             <li class="menu__item"><a class="menu__link left__menu__item contact-block" href="price.html">
                 <div class="contact__icon">
                   <svg class="contact__svg">
@@ -154,7 +161,7 @@
                 <div class="button button_blue_bg order-button">Заказать запчасть</div>
               </div>
               <p class="mini-content__p">или<br>Отошлите фото техпаспорта и наш менеджер свяжется с вами и согласует заказ</p>
-              <div class="button button_blue_bg order-button-img">Заказать запчасть</div>
+              <div class="button button_blue_border order-button-img">Заказать запчасть по тех. паспорту</div>
             </div>
           </div>
         </div>
@@ -241,9 +248,28 @@
           <div class="input send__input">
             <textarea class="textarea" name="desc" placeholder="Опишите Вашу деталь" required></textarea>
           </div>
-          <input class="button-file" type="file" name="files">
+          <div class="fileform">
+            <div id="fileformlabel"></div>
+            <div class="selectbutton">Загрузить фото</div>
+            <input type="file" name="files" id="upload" onchange="getName(this.value)">
+          </div>
           <input class="button send__button" type="submit" value="Заказать деталь">
-          <p class="form-paragraf">Персональные данные используются исключительно с целью оказания консультации и для предоставления услуг автосервиса. Для подтверждения Вашего согласия на обработку данных нажмите "Заказать деталь"</p>
+          <p class="form-paragraf">Персональные данные используются исключительно с целью оказания консультации и для предоставления услуг автосервиса. Для подтверждения Вашего согласия на обработку данных нажмите "Заказать деталь"
+            <script type="text/javascript">
+              function getName(str) {
+              if (str.lastIndexOf('\\')) {
+              	var i = str.lastIndexOf('\\') + 1;
+              }
+              else {
+              	var i = str.lastIndexOf('/') + 1;
+              }
+              var filename = str.slice(i);
+              console.log(filename);
+              var uploaded = document.getElementById("fileformlabel");
+              uploaded.innerHTML = filename;
+              };
+            </script>
+          </p>
         </form>
       </div>
     </div>

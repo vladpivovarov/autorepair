@@ -13,7 +13,23 @@ var module = function() {
         toPrice();
         toOrder();
         toOrderJpg();
+        file();
     };
+
+    var file = function() {
+      function getName (str){
+        if (str.lastIndexOf('\\')){
+          var i = str.lastIndexOf('\\')+1;
+        }
+        else{
+          var i = str.lastIndexOf('/')+1;
+        }
+        var filename = str.slice(i);
+        console.log(filename);
+        var uploaded = document.getElementById("fileformlabel");
+        uploaded.innerHTML = filename;
+      };
+    }
 
     var toOrder = function() {
       var orderButton = document.querySelector(".order-button"),
@@ -187,6 +203,7 @@ var module = function() {
       }
       });
     };
+
     return {
         init: init
     }
